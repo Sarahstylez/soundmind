@@ -1,5 +1,10 @@
 # SoundMind App
 
+### Trello Link:
+https://trello.com/b/P70uWLwz/soundmind-an-adhd-symptom-tracker
+
+---
+
 ## Overview
 
 **SoundMind** is _a mobile app that helps users track mood and ADHD-related symptoms_. It allows users to create, read, update, and delete daily entries, providing insights through data visualization and personalized analytics. SoundMind supports both those seeking a diagnosis and those with an existing one, helping all users better understand and manage their condition.
