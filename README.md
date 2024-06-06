@@ -106,6 +106,7 @@ Data Export:
 
 - Data Visualization
   - Trends/Reports
+
 - User Profile
   - Settings
   - Notifications
@@ -245,34 +246,26 @@ Data Export:
 
 ---
 
-3. User Authentication
-
-- Registration: _Create form, validate, and implement API calls._
-- Login: _Create form, validate, and implement API calls._
-- State Management: _Use Redux/Context API and implement protected routes._
-
----
-
-4. Mood and Symptom Tracking
+3. Mood and Symptom Tracking
 
 - Daily Log: _Create form and implement CRUD API calls._
 - Symptom Checklists: _Create component and integrate logging._
 
 ---
 
-5. Data Visualization
+4. Data Visualization
 
 - Integrate charts from Image-Charts and create visualization components.
 
 ---
 
-6. Data Export
+5. Data Export
 
 - Implement export button and use jsPDF for PDF generation.
 
 ---
 
-7. Back-End Development
+6. Back-End Development
 
 - Express Server
 - Create an Express.js application.
@@ -280,47 +273,49 @@ Data Export:
 
 ---
 
-8. Database Configuration
+7. Database Configuration
 
 - Set up MySQL database and create schemas.
 - Configure Knex, create migration and seed files.
 
 ---
 
-9. User Authentication
-
-- Registration: _Implement endpoint and hash passwords with bcrypt._
-- Login: _Implement endpoint and generate JWT tokens._
-- Middleware: _Create JWT token protection middleware._
-
----
-
-10. Mood and Symptom Tracking
+8. Mood and Symptom Tracking
 
 - Implement CRUD endpoints for mood and symptom entries.
 - Create endpoint to fetch symptom checklists.
 
 ---
 
-11. Data Visualization
+9. Data Visualization
 
 - Implement data retrieval and aggregation endpoints.
 
 ---
 
-12. Data Export
+10. Data Export
 
 - Implement endpoint for data export and format data for PDF generation.
 
 ---
 
-13. Integration and Testing
+12. Integration and Testing
 
 - Connect front-end to back-end API endpoints and ensure proper data flow.
 
 ---
 
 ## Nice-to-haves
+
+User Authentication:
+
+- Registration: _Create form, validate, and implement API calls._
+- Login: _Create form, validate, and implement API calls._
+- State Management: _Use Redux/Context API and implement protected routes._ 
+
+- Registration: _Implement endpoint and hash passwords with bcrypt._
+- Login: _Implement endpoint and generate JWT tokens._
+- Middleware: _Create JWT token protection middleware._
 
 Educational Content:
 
