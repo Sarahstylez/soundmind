@@ -5,4 +5,30 @@
 .landing {
   background-image: url(../../assets/images/background-1.svg);
   height: 932px;
+  &__container {
+    padding-top: 8rem;
+    padding-left: 1.5rem;
+  }
+  &__slogan {
+    @include flex(left, space-between);
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+    margin-top: 4rem;
+    margin-left: 1.5rem;
+  }
+  &__CTAs {
+    @include flex(center, space-between);
+    flex-direction: column;
+    height: 9rem;
+    margin-top: 6rem;
+  }
+}
+
+.logo {
+  &__text {
+    background-image: url(../../assets/logos/soundmind-text.svg);
+    height: 30rem;
+    width: 100%;
+  }
 }

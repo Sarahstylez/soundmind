@@ -1,0 +1,19 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__utils" as *;
+
+.button {
+  width: 360px;
+  height: 60px;
+  border-radius: 0.8125rem;
+  border: none;
+
+  /* Drop Shadow */
+  box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+  backdrop-filter: blur(40px);
+
+  &__primary {
+    color: $color-primary-off-white;
+    background-color: $color-primary-slate-grey;
+  }
+}
