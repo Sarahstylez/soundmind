@@ -20,4 +20,14 @@ function SecondaryButton({ label, onClick }) {
   );
 }
 
-export { PrimaryButton, SecondaryButton };
+function SignUpButton({ label, onClick }) {
+  return (
+    <>
+      <button className="clear-button button__signup" onClick={onClick}>
+        <h3>{label}</h3>
+      </button>
+    </>
+  );
+}
+
+export { PrimaryButton, SecondaryButton, SignUpButton };

@@ -1,0 +1,17 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__utils" as *;
+
+.welcome {
+  background-image: url(../../assets/images/background-2.svg);
+  height: 932px;
+  @include flex();
+  &__container {
+    height: auto;
+    padding-top: 16rem;
+  }
+  &__message {
+    height: 3rem;
+    width: 15.8rem;
+  }
+}

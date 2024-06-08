@@ -1,21 +1,17 @@
 import "./LandingPage.scss";
 import { PrimaryButton, SecondaryButton } from "../../components/CTAs/CTAs";
 import Logo from "../../assets/logos/logo-large.svg";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
-  const navigate = useNavigate();
-
-  const handleLoginClick = () => {
-    navigate("/login");
-  };
-
-  const handleSignupClick = () => {
-    navigate("/signup");
-  };
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div className="landing">
+    <section className="landing">
       <div className="logo__text">
         <section className="landing__container">
           <img src={Logo} alt="large soundmind logo" />
@@ -25,11 +21,15 @@ function LandingPage() {
           </div>
         </section>
         <section className="landing__CTAs">
-          <PrimaryButton label="Log in" onClick={handleLoginClick} />
-          <SecondaryButton label="Sign up" onClick={handleSignupClick} />
+          <Link to="/login">
+            <PrimaryButton label="Log in" />
+          </Link>
+          <Link to="/signup">
+            <SecondaryButton label="Sign up" />
+          </Link>
         </section>
       </div>
-    </div>
+    </section>
   );
 }
 

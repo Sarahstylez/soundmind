@@ -3,7 +3,7 @@
 @use "../../styles/partials/__utils" as *;
 
 .button {
-  width: 360px;
+  width: 370px;
   height: 60px;
   border-radius: 0.8125rem;
   border: none;
@@ -16,4 +16,22 @@
     color: $color-primary-off-white;
     background-color: $color-primary-slate-grey;
   }
+
+  &__secondary {
+    color: $color-primary-dsb;
+    background-color: $color-primary-off-white;
+  }
+
+  &__signup {
+    text-decoration: underline;
+    color: $color-secondary-olive;
+    background-color: transparent;
+  }
+}
+
+.clear-button {
+  width: 370px;
+  height: 60px;
+  border: none;
+  backdrop-filter: blur(40px);
 }

@@ -1,0 +1,45 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__utils" as *;
+
+.login {
+  &__container {
+    padding: $padding-s;
+    width: 85%;
+  }
+  &__form {
+    flex-direction: column;
+    width: 100%;
+    &-container {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+    &-label {
+      /* h3 */
+      font-size: 20px;
+      line-height: 40px; // more line-height for form
+      font-family: "Lato Light";
+      color: $color-secondary-dsg;
+    }
+    &-input {
+      background-color: $color-primary-parchment;
+      opacity: 0.67;
+      width: 340px;
+      height: 35px;
+      padding: 0 0.75rem;
+      border: 1px solid $color-primary-dark-sage;
+      border-radius: 0.5625rem;
+      font-feature-settings: "clig" off, "liga" off;
+
+      /* h5 */
+      font-size: 16px;
+      line-height: 19px;
+      font-family: "Lato Regular";
+      color: $color-primary-dark-sage;
+
+      /* Drop Shadow */
+      box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+      backdrop-filter: blur(40px);
+    }
+  }
+}

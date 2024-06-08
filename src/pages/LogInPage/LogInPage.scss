@@ -5,6 +5,12 @@
 .login {
   @include flex();
   flex-direction: column;
+  &__CTAs {
+    @include flex(center, space-between);
+    flex-direction: column;
+    height: 8rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .title {
