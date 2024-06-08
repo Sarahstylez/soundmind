@@ -1,6 +1,7 @@
 # SoundMind App
 
 ### Trello Link:
+
 https://trello.com/b/P70uWLwz/soundmind-an-adhd-symptom-tracker
 
 ---
@@ -219,7 +220,7 @@ Data Export:
   - Before adding auth, all API requests will be using a fake user with id 1
   - Added after core features have first been implemented
   - Store JWT in localStorage, remove when a user logs out
-  - Add states for logged in showing different UI in places listed in mockups
+  - Add states for logged-in showing different UI in places listed in mockups
 
 ---
 
@@ -241,7 +242,7 @@ Data Export:
 
 - React Application
 - Create a React app.
-- Install necessary libraries: react, react-router-dom, axios, redux, material-ui.
+- Install necessary libraries: react, react-router-dom, Axios, redux, material-ui.
 
 ---
 
