@@ -93,8 +93,7 @@ $header-two: (
 $header-three: (
   font-size: 20px,
   line-height: 24px,
-  font-family: "Lato Thin",
-  //   color: $color-primary-slate-grey,
+  font-family: "Lato Thin" // color: $color-primary-slate-grey,,,,
 );
 
 $header-four: (
@@ -105,7 +104,7 @@ $header-four: (
 );
 
 $header-five: (
-  font-size: 16x,
+  font-size: 16px,
   line-height: 19px,
   font-family: "Lato Regular",
   color: $color-primary-dark-sage,

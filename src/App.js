@@ -1,9 +1,9 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import LandingPage from "./pages/LandingPage/LandingPage";
 // import LogInPage from "./pages/LogInPage/LogInPage";
 // import SignUpPage from "./pages/SignUpPage/SignUpPage";
 // import HomePage from "./pages/HomePage/HomePage";
+import "./App.scss";
 
 function App() {
   return (
