@@ -11,9 +11,9 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/log-in" element={<LogInPage />} />
+          {/* <Route path="/log-in" element={<LogInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} /> */}
           <Route path="*" element={<h1>Page not found</h1>} />
         </Routes>
       </HashRouter>
