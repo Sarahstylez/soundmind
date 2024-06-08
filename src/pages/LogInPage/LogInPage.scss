@@ -1,0 +1,22 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__utils" as *;
+
+.login {
+  @include flex();
+  flex-direction: column;
+}
+
+.title {
+  @include flex(start, space-between);
+  width: 85%;
+  margin-top: 3rem;
+  padding: $padding-m $padding-s;
+  &__text {
+    @include flex(end, space-between);
+    flex-direction: column;
+    width: 10rem;
+    height: 9rem;
+    text-align: right;
+  }
+}

@@ -11,12 +11,23 @@
     padding: 0;
   }
 
-  html {
+  html,
+  body {
     scroll-behavior: smooth;
+    height: 932px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   body {
     background-color: $color-primary-parchment;
+    background: linear-gradient(
+      187deg,
+      #fdf2e7 -0.86%,
+      #ecf1f0 74.29%,
+      #e3e7e4 102.8%
+    );
   }
 
   /* -------------------------------------------------------------------------- */
