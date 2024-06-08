@@ -1,0 +1,8 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__utils" as *;
+
+.landing {
+  background-image: url(../../assets/images/background-1.svg);
+  height: 932px;
+}
