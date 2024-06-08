@@ -106,6 +106,7 @@ Data Export:
   - Symptom Checklists
 
 - Data Visualization
+
   - Trends/Reports
 
 - User Profile
@@ -116,7 +117,41 @@ Data Export:
 
 ### Mockups
 
-(insert here)
+#### Landing Page
+
+![](Landing-Page.png)
+
+#### Login Page
+
+![](Log-in.png)
+
+#### Register Page
+
+![](Register.png)
+
+#### Welcome Page
+
+![](Welcome.png)
+
+#### Home Page
+
+![](Home-Page.png)
+
+#### Daily Log Page
+
+![](Daily-Log.png)
+
+#### Overview Page
+
+![](Overview.png)
+
+#### Overview - Month Page
+
+![](Overview-Month.png)
+
+#### Settings Page
+
+![](Settings.png)
 
 ---
 
@@ -228,7 +263,7 @@ Data Export:
 ## Roadmap
 
 1. Initialize Repository
-   1. Set up Git and initialize project directory.
+   1. Set up Git and initialize the project directory.
    2. Set Up Development Environment
    3. Set up front-end and back-end directories.
    4. Configure package managers and install dependencies.
@@ -312,7 +347,7 @@ User Authentication:
 
 - Registration: _Create form, validate, and implement API calls._
 - Login: _Create form, validate, and implement API calls._
-- State Management: _Use Redux/Context API and implement protected routes._ 
+- State Management: _Use Redux/Context API and implement protected routes._
 
 - Registration: _Implement endpoint and hash passwords with bcrypt._
 - Login: _Implement endpoint and generate JWT tokens._
