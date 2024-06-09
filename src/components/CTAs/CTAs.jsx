@@ -10,6 +10,8 @@ import DailyLogIconInactive from "../../assets/icons/daily-log-inactive.svg";
 import DailyLogIconActive from "../../assets/icons/daily-log-active.svg";
 import OverviewIconInactive from "../../assets/icons/overview-inactive.svg";
 import OverviewIconActive from "../../assets/icons/overview-active.svg";
+import NextArrowIcon from "../../assets/icons/arrow-right.svg";
+import SmallArrowIcon from "../../assets/icons/arrow-form.svg";
 
 /* -------------------------------------------------------------------------- */
 /*                                   Buttons                                  */
@@ -175,6 +177,35 @@ function OverviewButton() {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                              Next Arrow Button                             */
+/* -------------------------------------------------------------------------- */
+
+function NextArrow() {
+  const { id } = useParams();
+  const location = useLocation();
+
+  return (
+    <button className="button__next-arrow">
+      {location.pathname !== "/overview" && <h4>{id}</h4>}
+      <img src={NextArrowIcon} alt="next arrow icon" />
+    </button>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Select Month Button                             */
+/* -------------------------------------------------------------------------- */
+
+function SelectMonthButton({ month }) {
+  return (
+    <button className="button-small button__select-month">
+      <h3>{month}</h3>
+      <img src={SmallArrowIcon} alt="small next arrow icon" />
+    </button>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                 Export List                                */
 /* -------------------------------------------------------------------------- */
 
@@ -186,4 +217,6 @@ export {
   ExportButton,
   DailyLogButton,
   OverviewButton,
+  NextArrow,
+  SelectMonthButton,
 };

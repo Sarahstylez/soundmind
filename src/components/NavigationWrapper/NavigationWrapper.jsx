@@ -7,8 +7,10 @@ const NavigationWrapper = ({ children }) => {
     "/home",
     "/settings",
     "/dailylog/:id",
+    "/dailylog/undefined",
     "/overview",
     "/overview/:id",
+    "/overview/undefined",
   ].some((path) => location.pathname.startsWith(path));
 
   return (

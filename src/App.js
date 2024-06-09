@@ -11,6 +11,7 @@ import DailyLog from "./components/DailyLog/DailyLog";
 import Overview from "./components/Overview/Overview";
 import OverviewMonth from "./components/OverviewMonth/OverviewMonth";
 import NavigationWrapper from "./components/NavigationWrapper/NavigationWrapper";
+import { NextArrow } from "./components/CTAs/CTAs";
 
 function App() {
   return (
@@ -25,9 +26,17 @@ function App() {
             <Route path="/welcome" element={<WelcomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/dailylog/:id" element={<DailyLog />} />
+            <Route
+              path="/dailylog/:id"
+              element={<DailyLog />}
+              component={NextArrow}
+            />
             <Route path="/overview" element={<Overview />} />
-            <Route path="/overview/:id" element={<OverviewMonth />} />
+            <Route
+              path="/overview/:id"
+              element={<OverviewMonth />}
+              component={NextArrow}
+            />
             <Route path="*" element={<h1>Page not found</h1>} />
           </Routes>
         </NavigationWrapper>
