@@ -1,8 +1,14 @@
 import { Link, useParams } from "react-router-dom";
 import { NextArrow } from "../../components/CTAs/CTAs";
+import { useEffect } from "react";
 import "./HomePage.scss";
 
 function HomePage() {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams();
   return (
     <>

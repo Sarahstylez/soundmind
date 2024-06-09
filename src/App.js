@@ -1,6 +1,8 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.scss";
 import Overlay from "./components/iOS/iOS";
+import Viewport from "./components/Viewport/Viewport";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import LogInPage from "./pages/LogInPage/LogInPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
@@ -13,10 +15,13 @@ import OverviewMonth from "./components/OverviewMonth/OverviewMonth";
 import NavigationWrapper from "./components/NavigationWrapper/NavigationWrapper";
 import { NextArrow } from "./components/CTAs/CTAs";
 
-function App() {
+const MainApp = () => {
+  const location = useLocation();
+  const isDailyLogRoute = location.pathname.startsWith("/dailylog/");
+
   return (
-    <div className="App">
-      <HashRouter>
+    <div className={`App ${isDailyLogRoute ? "daily-log-height" : ""}`}>
+      <Viewport>
         <NavigationWrapper>
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -40,9 +45,17 @@ function App() {
             <Route path="*" element={<h1>Page not found</h1>} />
           </Routes>
         </NavigationWrapper>
-      </HashRouter>
+      </Viewport>
       <Overlay /> {/* Add the overlay component here */}
     </div>
+  );
+};
+
+function App() {
+  return (
+    <HashRouter>
+      <MainApp />
+    </HashRouter>
   );
 }
 

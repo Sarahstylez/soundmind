@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Overview.scss";
 import { SelectMonthButton } from "../CTAs/CTAs";
 import logsData from "../../data/logs.json";
 
 function Overview() {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 

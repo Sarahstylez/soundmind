@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Forms.scss";
+import { PrimaryButton, SecondaryButton } from "../CTAs/CTAs";
+
+/* -------------------------------------------------------------------------- */
+/*                                 Log In Form                                */
+/* -------------------------------------------------------------------------- */
 
 function LogInForm() {
   useEffect(() => {
@@ -54,4 +60,190 @@ function LogInForm() {
   );
 }
 
-export { LogInForm };
+/* -------------------------------------------------------------------------- */
+/*                               Daily Log Form                               */
+/* -------------------------------------------------------------------------- */
+
+const DailyLogForm = () => {
+  const [formData, setFormData] = useState({
+    description: "",
+    symptomChecklist: {
+      category1: [],
+      category2: [],
+      category3: [],
+      category4: [],
+      category5: [],
+    },
+    experienceChecklist: {
+      category1: [],
+      category2: [],
+      category3: [],
+      category4: [],
+      category5: [],
+    },
+    events: "",
+  });
+
+  const [categories, setCategories] = useState({
+    symptomCategories: {},
+    experienceCategories: {},
+    categoryNames: {},
+    experienceCategoryNames: {},
+  });
+
+  useEffect(() => {
+    fetch("./data/symptoms.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setFormData({
+          description: data.description,
+          symptomChecklist: data.symptomChecklist,
+          experienceChecklist: data.experienceChecklist,
+          events: data.events,
+        });
+        setCategories({
+          symptomCategories: data.symptomCategories,
+          experienceCategories: data.experienceCategories,
+          categoryNames: data.categoryNames,
+          experienceCategoryNames: data.experienceCategoryNames,
+        });
+      })
+      .catch((error) => console.error("Error fetching form data:", error));
+  }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleCheckboxChange = (e, category, type) => {
+    const { name, checked } = e.target;
+    setFormData({
+      ...formData,
+      [type]: {
+        ...formData[type],
+        [category]: checked
+          ? [...formData[type][category], name]
+          : formData[type][category].filter((item) => item !== name),
+      },
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+  return (
+    <section className="dl">
+      <form className="dl-form" onSubmit={handleSubmit}>
+        <section className="dl-form__description">
+          <label>
+            <h3 className="dl-form__title">How are you feeling, really?</h3>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleInputChange}
+              rows="3"
+              placeholder="Write 1-2 sentences describing your day."
+            />
+          </label>
+        </section>
+        <section className="dl-form__symptoms">
+          <h3 className="dl-form__title">Let's keep track of your day:</h3>
+          <div className="dl-form__container">
+            {Object.keys(categories.symptomCategories).map((category) => (
+              <div className="dl-form__container-category" key={category}>
+                <h4>{categories.categoryNames[category]}</h4>
+                <div className="dl-form__checklist">
+                  {categories.symptomCategories[category].map((symptom) => (
+                    <label
+                      className="dl-form__checklist-text checkbox-container"
+                      key={symptom}
+                    >
+                      <input
+                        type="checkbox"
+                        name={symptom}
+                        checked={formData.symptomChecklist[category].includes(
+                          symptom
+                        )}
+                        onChange={(e) =>
+                          handleCheckboxChange(e, category, "symptomChecklist")
+                        }
+                      />{" "}
+                      <span className="checkmark"></span>
+                      {symptom}
+                    </label>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div>
+          <h3 className="dl-form__title">How did today go?</h3>
+          <div className="dl-form__container">
+            {Object.keys(categories.experienceCategories).map((category) => (
+              <div className="dl-form__container-category" key={category}>
+                <h4>{categories.experienceCategoryNames[category]}</h4>
+                <div className="dl-form__checklist">
+                  {categories.experienceCategories[category].map(
+                    (experience) => (
+                      <label
+                        className="dl-form__checklist-text checkbox-container"
+                        key={experience}
+                      >
+                        <input
+                          type="checkbox"
+                          name={experience}
+                          checked={formData.experienceChecklist[
+                            category
+                          ].includes(experience)}
+                          onChange={(e) =>
+                            handleCheckboxChange(
+                              e,
+                              category,
+                              "experienceChecklist"
+                            )
+                          }
+                        />
+                        <span className="checkmark"></span>
+                        {experience}
+                      </label>
+                    )
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <section className="dl-form__events">
+          <label>
+            <h3 className="dl-form__title">Anything else to add?</h3>
+            <textarea
+              name="events"
+              value={formData.events}
+              onChange={handleInputChange}
+              rows="5"
+              placeholder="Include any additional notes about today and the events that occurred."
+            />
+          </label>
+        </section>
+        <section className="dl-form__CTAs">
+          <PrimaryButton label="Save" />
+          <Link to="/home">
+            <SecondaryButton label="Cancel" />
+          </Link>
+        </section>
+      </form>
+    </section>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/*                                Form Exports                                */
+/* -------------------------------------------------------------------------- */
+
+export { LogInForm, DailyLogForm };

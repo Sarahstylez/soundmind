@@ -1,0 +1,93 @@
+{
+  "description": "",
+  "symptomChecklist": {
+    "category1": [],
+    "category2": [],
+    "category3": [],
+    "category4": [],
+    "category5": []
+  },
+  "experienceChecklist": {
+    "category1": [],
+    "category2": [],
+    "category3": [],
+    "category4": [],
+    "category5": []
+  },
+  "events": "",
+  "symptomCategories": {
+    "category1": [
+      "Difficulty sustaining attention",
+      "Easily distracted",
+      "Frequently switching tasks",
+      "Difficulty organizing tasks"
+    ],
+    "category2": [
+      "Fidgeting or tapping",
+      "Inability to stay seated",
+      "Talking excessively",
+      "Interrupting others"
+    ],
+    "category3": [
+      "Mood swings",
+      "Irritability or frustration",
+      "Sensitivity to criticism"
+    ],
+    "category4": [
+      "Forgetfulness",
+      "Misplacing items",
+      "Poor time management",
+      "Procrastination"
+    ],
+    "category5": [
+      "Trouble falling asleep",
+      "Fatigue despite adequate sleep",
+      "Headaches or muscle tension"
+    ]
+  },
+  "experienceCategories": {
+    "category1": [
+      "1 - Terrible",
+      "2 - Poor",
+      "3 - Average",
+      "4 - Good",
+      "5 - Excellent"
+    ],
+    "category2": [
+      "1 - Terrible",
+      "2 - Poor",
+      "3 - Average",
+      "4 - Good",
+      "5 - Excellent"
+    ],
+    "category3": [
+      "1 - Terrible",
+      "2 - Poor",
+      "3 - Average",
+      "4 - Good",
+      "5 - Excellent"
+    ],
+    "category4": [
+      "1 - Terrible",
+      "2 - Poor",
+      "3 - Average",
+      "4 - Good",
+      "5 - Excellent"
+    ],
+    "category5": ["Yes", "No"]
+  },
+  "categoryNames": {
+    "category1": "Attention and Focus",
+    "category2": "Hyperactivity and Impulsivity",
+    "category3": "Emotional Regulation",
+    "category4": "Daily Functioning",
+    "category5": "Sleep and Physicality"
+  },
+  "experienceCategoryNames": {
+    "category1": "Overall Mood",
+    "category2": "Energy Levels",
+    "category3": "Stress Levels",
+    "category4": "Sleep Quality",
+    "category5": "Medication Taken"
+  }
+}
