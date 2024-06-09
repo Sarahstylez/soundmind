@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Forms.scss";
+import { PrimaryButton, SecondaryButton } from "../CTAs/CTAs";
 
 /* -------------------------------------------------------------------------- */
 /*                                 Log In Form                                */
@@ -82,6 +84,33 @@ const DailyLogForm = () => {
     events: "",
   });
 
+  const [categories, setCategories] = useState({
+    symptomCategories: {},
+    experienceCategories: {},
+    categoryNames: {},
+    experienceCategoryNames: {},
+  });
+
+  useEffect(() => {
+    fetch("./data/symptoms.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setFormData({
+          description: data.description,
+          symptomChecklist: data.symptomChecklist,
+          experienceChecklist: data.experienceChecklist,
+          events: data.events,
+        });
+        setCategories({
+          symptomCategories: data.symptomCategories,
+          experienceCategories: data.experienceCategories,
+          categoryNames: data.categoryNames,
+          experienceCategoryNames: data.experienceCategoryNames,
+        });
+      })
+      .catch((error) => console.error("Error fetching form data:", error));
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -105,62 +134,6 @@ const DailyLogForm = () => {
     console.log(formData);
   };
 
-  const symptomCategories = {
-    category1: ["Difficulty sustaining attention", "Symptom 2", "Symptom 3"],
-    category2: ["Symptom 4", "Symptom 5", "Symptom 6"],
-    category3: ["Symptom 7", "Symptom 8", "Symptom 9"],
-    category4: ["Symptom 10", "Symptom 11", "Symptom 12"],
-    category5: ["Symptom 13", "Symptom 14", "Symptom 15"],
-  };
-
-  const experienceCategories = {
-    category1: [
-      "Experience 1",
-      "Experience 2",
-      "Experience 3",
-      "Experience 4",
-      "Experience 5",
-    ],
-    category2: [
-      "Experience 6",
-      "Experience 7",
-      "Experience 8",
-      "Experience 9",
-      "Experience 10",
-    ],
-    category3: [
-      "Experience 11",
-      "Experience 12",
-      "Experience 13",
-      "Experience 14",
-      "Experience 15",
-    ],
-    category4: [
-      "Experience 16",
-      "Experience 17",
-      "Experience 18",
-      "Experience 19",
-      "Experience 20",
-    ],
-    category5: ["Experience 21", "Experience 22"],
-  };
-
-  const categoryNames = {
-    category1: "Attention and Focus",
-    category2: "Hyperactivity and Focus",
-    category3: "Emotional Regulation",
-    category4: "Daily Functioning",
-    category5: "Sleep and Physicality",
-  };
-
-  const experienceCategoryNames = {
-    category1: "Overall Mood",
-    category2: "Energy Levels",
-    category3: "Stress Levels",
-    category4: "Sleep Quality",
-    category5: "Medication Taken",
-  };
-
   return (
     <section className="dl">
       <form className="dl-form" onSubmit={handleSubmit}>
@@ -179,12 +152,15 @@ const DailyLogForm = () => {
         <section className="dl-form__symptoms">
           <h3 className="dl-form__title">Let's keep track of your day:</h3>
           <div className="dl-form__container">
-            {Object.keys(symptomCategories).map((category) => (
+            {Object.keys(categories.symptomCategories).map((category) => (
               <div className="dl-form__container-category" key={category}>
-                <h4>{categoryNames[category]}</h4>
+                <h4>{categories.categoryNames[category]}</h4>
                 <div className="dl-form__checklist">
-                  {symptomCategories[category].map((symptom) => (
-                    <label className="dl-form__checklist-text" key={symptom}>
+                  {categories.symptomCategories[category].map((symptom) => (
+                    <label
+                      className="dl-form__checklist-text checkbox-container"
+                      key={symptom}
+                    >
                       <input
                         type="checkbox"
                         name={symptom}
@@ -194,7 +170,8 @@ const DailyLogForm = () => {
                         onChange={(e) =>
                           handleCheckboxChange(e, category, "symptomChecklist")
                         }
-                      />
+                      />{" "}
+                      <span className="checkmark"></span>
                       {symptom}
                     </label>
                   ))}
@@ -207,48 +184,63 @@ const DailyLogForm = () => {
         <div>
           <h3 className="dl-form__title">How did today go?</h3>
           <div className="dl-form__container">
-            {Object.keys(experienceCategories).map((category) => (
-              <div key={category}>
-                <h4>{experienceCategoryNames[category]}</h4>
-                {experienceCategories[category].map((experience) => (
-                  <label key={experience}>
-                    <input
-                      type="checkbox"
-                      name={experience}
-                      checked={formData.experienceChecklist[category].includes(
-                        experience
-                      )}
-                      onChange={(e) =>
-                        handleCheckboxChange(e, category, "experienceChecklist")
-                      }
-                    />
-                    {experience}
-                  </label>
-                ))}
+            {Object.keys(categories.experienceCategories).map((category) => (
+              <div className="dl-form__container-category" key={category}>
+                <h4>{categories.experienceCategoryNames[category]}</h4>
+                <div className="dl-form__checklist">
+                  {categories.experienceCategories[category].map(
+                    (experience) => (
+                      <label
+                        className="dl-form__checklist-text checkbox-container"
+                        key={experience}
+                      >
+                        <input
+                          type="checkbox"
+                          name={experience}
+                          checked={formData.experienceChecklist[
+                            category
+                          ].includes(experience)}
+                          onChange={(e) =>
+                            handleCheckboxChange(
+                              e,
+                              category,
+                              "experienceChecklist"
+                            )
+                          }
+                        />
+                        <span className="checkmark"></span>
+                        {experience}
+                      </label>
+                    )
+                  )}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div>
+        <section className="dl-form__events">
           <label>
-            Events (3-4 sentences):
+            <h3 className="dl-form__title">Anything else to add?</h3>
             <textarea
               name="events"
               value={formData.events}
               onChange={handleInputChange}
-              rows="4"
+              rows="5"
+              placeholder="Include any additional notes about today and the events that occurred."
             />
           </label>
-        </div>
-
-        <button type="submit">Submit</button>
+        </section>
+        <section className="dl-form__CTAs">
+          <PrimaryButton label="Save" />
+          <Link to="/home">
+            <SecondaryButton label="Cancel" />
+          </Link>
+        </section>
       </form>
     </section>
   );
 };
-
-export default DailyLogForm;
 
 /* -------------------------------------------------------------------------- */
 /*                                Form Exports                                */
