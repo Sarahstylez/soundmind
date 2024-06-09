@@ -2,6 +2,10 @@
 @use "../../styles/partials/__mixins" as *;
 @use "../../styles/partials/__utils" as *;
 
+/* -------------------------------------------------------------------------- */
+/*                             Log In Form Styles                             */
+/* -------------------------------------------------------------------------- */
+
 .login {
   &__container {
     padding: $padding-s;
@@ -40,6 +44,83 @@
       /* Drop Shadow */
       box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
       backdrop-filter: blur(40px);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Daily Log Form Styles                           */
+/* -------------------------------------------------------------------------- */
+
+textarea {
+  background-color: $color-secondary-champagne;
+  opacity: 0.88;
+  width: 93%;
+  height: 4.75rem;
+  padding: 0.75rem;
+  border: 1px solid $color-primary-dark-sage;
+  border-radius: 0.5625rem;
+
+  /* h5 */
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato Regular";
+  color: $color-primary-dsb;
+
+  /* Drop Shadow */
+  box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+  backdrop-filter: blur(40px);
+
+  &:active {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dsb;
+  }
+
+  &:hover {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dsb;
+  }
+
+  &::placeholder {
+    color: $color-primary-dark-sage;
+  }
+}
+
+.dl {
+  padding: 0 $padding-s;
+  width: 88%;
+  height: 120rem;
+  &-form {
+    &__title {
+      color: $color-primary-slate-grey;
+      padding: $padding-s 0;
+    }
+    &__container {
+      background-color: $color-secondary-champagne;
+      opacity: 0.88;
+      width: 82%;
+      height: 100%;
+      padding: 2rem;
+      border: 1px solid $color-primary-dark-sage;
+      border-radius: 0.5625rem;
+      &-category {
+        padding-bottom: 2rem;
+      }
+    }
+    &__checklist {
+      @include flex(start, start);
+      flex-direction: column;
+      &-text {
+        padding: $padding-xxs 0;
+        /* p text styles*/
+
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "Lato Regular";
+        color: $color-primary-dark-sage;
+      }
     }
   }
 }
