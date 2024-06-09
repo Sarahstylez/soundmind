@@ -27,6 +27,13 @@
     color: $color-secondary-olive;
     background-color: transparent;
   }
+
+  &__back-arrow {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 }
 
 .clear-button {

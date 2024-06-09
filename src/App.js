@@ -17,6 +17,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/soundmind" element={<LandingPage />} />
           <Route path="/login" element={<LogInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/welcome" element={<WelcomePage />} />

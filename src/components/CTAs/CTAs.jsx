@@ -1,4 +1,6 @@
 import "./CTAs.scss";
+import { useLocation, useNavigate } from "react-router-dom";
+import BackArrowIcon from "../../assets/icons/arrow-left.svg";
 
 function PrimaryButton({ label, onClick }) {
   return (
@@ -30,4 +32,23 @@ function SignUpButton({ label, onClick }) {
   );
 }
 
-export { PrimaryButton, SecondaryButton, SignUpButton };
+function BackArrow() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleBackClick = () => {
+    if (location.pathname === "/home") {
+      navigate("/login");
+    } else {
+      navigate(-1);
+    }
+  };
+
+  return (
+    <button onClick={handleBackClick} className="button__back-arrow">
+      <img src={BackArrowIcon} alt="back arrow icon" />
+    </button>
+  );
+}
+
+export { PrimaryButton, SecondaryButton, SignUpButton, BackArrow };
