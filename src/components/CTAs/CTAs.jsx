@@ -4,6 +4,8 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import BackArrowIcon from "../../assets/icons/arrow-left.svg";
+import HomeIconInactive from "../../assets/icons/home-inactive.svg";
+import HomeIconActive from "../../assets/icons/home-active.svg";
 import ExportIconInactive from "../../assets/icons/export-inactive.svg";
 import ExportIconActive from "../../assets/icons/export-active.svg";
 import DailyLogIconInactive from "../../assets/icons/daily-log-inactive.svg";
@@ -73,6 +75,37 @@ function BackArrow() {
 /* -------------------------------------------------------------------------- */
 /*                           Bottom Navigation CTAs                           */
 /* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                 Home Button                                */
+/* -------------------------------------------------------------------------- */
+
+function HomeButton() {
+  const [isClicked, setIsClicked] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/home") {
+      setIsClicked(true);
+    } else {
+      setIsClicked(false);
+    }
+  }, [location.pathname]);
+
+  const handleClick = () => {
+    navigate("/home");
+  };
+
+  return (
+    <button className="button__home" onClick={handleClick}>
+      <img
+        src={isClicked ? HomeIconActive : HomeIconInactive}
+        alt={isClicked ? "home icon active" : "home icon inactive"}
+      />
+    </button>
+  );
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                Export Button                               */
@@ -214,6 +247,7 @@ export {
   SecondaryButton,
   SignUpButton,
   BackArrow,
+  HomeButton,
   ExportButton,
   DailyLogButton,
   OverviewButton,
