@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
+import "./NavigationWrapper.scss";
 
 const NavigationWrapper = ({ children }) => {
   const location = useLocation();

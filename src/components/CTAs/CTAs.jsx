@@ -229,9 +229,9 @@ function NextArrow() {
 /*                            Select Month Button                             */
 /* -------------------------------------------------------------------------- */
 
-function SelectMonthButton({ month }) {
+function SelectMonthButton({ month, onClick }) {
   return (
-    <button className="button-small button__select-month">
+    <button className="button-small button__select-month" onClick={onClick}>
       <h3>{month}</h3>
       <img src={SmallArrowIcon} alt="small next arrow icon" />
     </button>

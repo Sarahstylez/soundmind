@@ -5,10 +5,8 @@
   position: fixed;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; // Ensure it is on top of other elements
+  @include flex();
+  z-index: 2000; // Ensure it is on top of other elements
 
   &__top {
     top: 0;
