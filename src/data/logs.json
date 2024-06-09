@@ -1,0 +1,278 @@
+{
+  "user": "Alex Sharp",
+  "symptoms": [
+    {
+      "month_id": 1,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "often",
+        "Average Distraction Levels": "sometimes",
+        "Task Switching Frequency": "often",
+        "Organization Difficulty": "rarely"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "sometimes",
+        "Seating Inability Frequency": "rarely",
+        "Talking Excessively Frequency": "often",
+        "Interrupting Others Frequency": "sometimes"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "rarely",
+        "Irritability Levels": "sometimes",
+        "Sensitivity to Criticism": "often"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "often",
+        "Misplacing Items Frequency": "rarely",
+        "Time Management Difficulty": "sometimes",
+        "Procrastination Levels": "often"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "rarely",
+        "Fatigue Levels": "sometimes",
+        "Physical Symptoms": "often"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 3,
+        "Energy Trends": 3,
+        "Stress Trends": 4,
+        "Sleep Quality Trends": 3,
+        "Medication Adherence": 4,
+        "Notable Events Correlation": 2
+      }
+    },
+    {
+      "month_id": 2,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "sometimes",
+        "Average Distraction Levels": "often",
+        "Task Switching Frequency": "rarely",
+        "Organization Difficulty": "sometimes"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "often",
+        "Seating Inability Frequency": "sometimes",
+        "Talking Excessively Frequency": "rarely",
+        "Interrupting Others Frequency": "often"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "sometimes",
+        "Irritability Levels": "rarely",
+        "Sensitivity to Criticism": "sometimes"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "rarely",
+        "Misplacing Items Frequency": "often",
+        "Time Management Difficulty": "rarely",
+        "Procrastination Levels": "sometimes"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "often",
+        "Fatigue Levels": "rarely",
+        "Physical Symptoms": "sometimes"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 4,
+        "Energy Trends": 4,
+        "Stress Trends": 3,
+        "Sleep Quality Trends": 3,
+        "Medication Adherence": 3,
+        "Notable Events Correlation": 3
+      }
+    },
+    {
+      "month_id": 3,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "rarely",
+        "Average Distraction Levels": "rarely",
+        "Task Switching Frequency": "sometimes",
+        "Organization Difficulty": "often"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "rarely",
+        "Seating Inability Frequency": "often",
+        "Talking Excessively Frequency": "sometimes",
+        "Interrupting Others Frequency": "rarely"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "often",
+        "Irritability Levels": "often",
+        "Sensitivity to Criticism": "rarely"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "sometimes",
+        "Misplacing Items Frequency": "sometimes",
+        "Time Management Difficulty": "often",
+        "Procrastination Levels": "rarely"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "sometimes",
+        "Fatigue Levels": "often",
+        "Physical Symptoms": "rarely"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 3,
+        "Energy Trends": 3,
+        "Stress Trends": 2,
+        "Sleep Quality Trends": 4,
+        "Medication Adherence": 5,
+        "Notable Events Correlation": 3
+      }
+    },
+    {
+      "month_id": 4,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "sometimes",
+        "Average Distraction Levels": "rarely",
+        "Task Switching Frequency": "often",
+        "Organization Difficulty": "sometimes"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "rarely",
+        "Seating Inability Frequency": "sometimes",
+        "Talking Excessively Frequency": "often",
+        "Interrupting Others Frequency": "sometimes"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "sometimes",
+        "Irritability Levels": "often",
+        "Sensitivity to Criticism": "sometimes"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "often",
+        "Misplacing Items Frequency": "sometimes",
+        "Time Management Difficulty": "rarely",
+        "Procrastination Levels": "often"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "sometimes",
+        "Fatigue Levels": "rarely",
+        "Physical Symptoms": "often"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 2,
+        "Energy Trends": 3,
+        "Stress Trends": 3,
+        "Sleep Quality Trends": 2,
+        "Medication Adherence": 4,
+        "Notable Events Correlation": 3
+      }
+    },
+    {
+      "month_id": 5,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "rarely",
+        "Average Distraction Levels": "often",
+        "Task Switching Frequency": "sometimes",
+        "Organization Difficulty": "rarely"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "often",
+        "Seating Inability Frequency": "rarely",
+        "Talking Excessively Frequency": "sometimes",
+        "Interrupting Others Frequency": "often"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "often",
+        "Irritability Levels": "rarely",
+        "Sensitivity to Criticism": "sometimes"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "rarely",
+        "Misplacing Items Frequency": "often",
+        "Time Management Difficulty": "sometimes",
+        "Procrastination Levels": "rarely"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "often",
+        "Fatigue Levels": "sometimes",
+        "Physical Symptoms": "rarely"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 3,
+        "Energy Trends": 3,
+        "Stress Trends": 4,
+        "Sleep Quality Trends": 4,
+        "Medication Adherence": 4,
+        "Notable Events Correlation": 2
+      }
+    },
+    {
+      "month_id": 6,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "sometimes",
+        "Average Distraction Levels": "rarely",
+        "Task Switching Frequency": "often",
+        "Organization Difficulty": "rarely"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "sometimes",
+        "Seating Inability Frequency": "rarely",
+        "Talking Excessively Frequency": "often",
+        "Interrupting Others Frequency": "rarely"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "rarely",
+        "Irritability Levels": "often",
+        "Sensitivity to Criticism": "sometimes"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "often",
+        "Misplacing Items Frequency": "sometimes",
+        "Time Management Difficulty": "rarely",
+        "Procrastination Levels": "often"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "sometimes",
+        "Fatigue Levels": "rarely",
+        "Physical Symptoms": "often"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 3,
+        "Energy Trends": 3,
+        "Stress Trends": 4,
+        "Sleep Quality Trends": 3,
+        "Medication Adherence": 4,
+        "Notable Events Correlation": 2
+      }
+    },
+    {
+      "month_id": 7,
+      "Attention and Focus": {
+        "Average Difficulty Sustaining Attention": "rarely",
+        "Average Distraction Levels": "sometimes",
+        "Task Switching Frequency": "often",
+        "Organization Difficulty": "rarely"
+      },
+      "Hyperactivity and Impulsivity": {
+        "Fidgeting Frequency": "often",
+        "Seating Inability Frequency": "sometimes",
+        "Talking Excessively Frequency": "rarely",
+        "Interrupting Others Frequency": "often"
+      },
+      "Emotional Regulation": {
+        "Mood Swings Frequency": "sometimes",
+        "Irritability Levels": "often",
+        "Sensitivity to Criticism": "rarely"
+      },
+      "Daily Functioning": {
+        "Forgetfulness Incidents": "sometimes",
+        "Misplacing Items Frequency": "often",
+        "Time Management Difficulty": "rarely",
+        "Procrastination Levels": "sometimes"
+      },
+      "Sleep and Physical Symptoms": {
+        "Sleep Troubles Frequency": "rarely",
+        "Fatigue Levels": "often",
+        "Physical Symptoms": "sometimes"
+      },
+      "User Experience Tracking": {
+        "Mood Trends": 4,
+        "Energy Trends": 4,
+        "Stress Trends": 3,
+        "Sleep Quality Trends": 4,
+        "Medication Adherence": 4,
+        "Notable Events Correlation": 3
+      }
+    }
+  ]
+}

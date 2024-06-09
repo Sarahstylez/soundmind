@@ -1,0 +1,120 @@
+/* -------------------------------------------------------------------------- */
+/*                              Responsive Styles                             */
+/* -------------------------------------------------------------------------- */
+
+$mobile-width: 430px;
+$max-site-width: 1282px;
+
+/* -------------------------------------------------------------------------- */
+/*                            Primary Color Styles                            */
+/* -------------------------------------------------------------------------- */
+
+$color-primary-slate-grey: #3d5869;
+$color-primary-parchment: #f6f1eb;
+$color-primary-dsb: #313b65;
+$color-primary-dark-sage: #85948b;
+$color-primary-off-white: #fdfcf7;
+
+/* -------------------------------------------------------------------------- */
+/*                           Secondary Color Styles                           */
+/* -------------------------------------------------------------------------- */
+
+$color-secondary-steel-blue: #7b9caa;
+$color-secondary-dsg: #303b33;
+$color-secondary-olive: #5c665a;
+$color-secondary-champagne: #f4f0ed;
+$color-secondary-light-sage: #a7b9ae;
+$color-secondary-light-grey: #bdc2bf;
+
+/* -------------------------------------------------------------------------- */
+/*                           Supporting Color Styles                          */
+/* -------------------------------------------------------------------------- */
+
+$color-support-green: #50be9d;
+$color-support-red: #7d2809;
+
+/* -------------------------------------------------------------------------- */
+/*                               Padding Styles                               */
+/* -------------------------------------------------------------------------- */
+
+$padding-xxxl: 80px;
+$padding-xxl: 64px;
+$padding-xl: 56px;
+$padding-l: 48px;
+$padding-m: 40px;
+$padding-sm: 32px;
+$padding-s: 24px;
+$padding-xs: 16px;
+$padding-xxs: 8px;
+$padding-xxxs: 4px;
+
+/* -------------------------------------------------------------------------- */
+/*                                 Font Families                              */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("../../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: "Lato Thin";
+  src: url("../../assets/fonts/Lato-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../../assets/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PoiretOne";
+  src: url("../../assets/fonts/PoiretOne-Regular.ttf");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Mobile Text Styles                             */
+/* -------------------------------------------------------------------------- */
+
+$header-one: (
+  font-size: 40px,
+  line-height: 47px,
+  font-family: "PoiretOne",
+  color: $color-primary-slate-grey,
+  letter-spacing: 1px,
+);
+
+$header-two: (
+  font-size: 30px,
+  line-height: 35px,
+  font-family: "PoiretOne",
+  color: $color-primary-slate-grey,
+  letter-spacing: 1px,
+);
+
+$header-three: (
+  font-size: 20px,
+  line-height: 24px,
+  font-family: "Lato Light",
+);
+
+$header-four: (
+  font-size: 20px,
+  line-height: 24px,
+  font-family: "Lato Light",
+  color: $color-secondary-dsg,
+);
+
+$header-five: (
+  font-size: 16px,
+  line-height: 19px,
+  font-family: "Lato Regular",
+  color: $color-primary-dark-sage,
+);
+
+$body: (
+  font-size: 16px,
+  line-height: 19px,
+  font-family: "Lato Thin",
+  color: $color-primary-dark-sage,
+);
