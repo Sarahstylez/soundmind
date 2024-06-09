@@ -8,6 +8,8 @@ import ExportIconInactive from "../../assets/icons/export-inactive.svg";
 import ExportIconActive from "../../assets/icons/export-active.svg";
 import DailyLogIconInactive from "../../assets/icons/daily-log-inactive.svg";
 import DailyLogIconActive from "../../assets/icons/daily-log-active.svg";
+import OverviewIconInactive from "../../assets/icons/overview-inactive.svg";
+import OverviewIconActive from "../../assets/icons/overview-active.svg";
 
 /* -------------------------------------------------------------------------- */
 /*                                   Buttons                                  */
@@ -110,7 +112,7 @@ const ExportButton = () => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*                                Other Buttons                               */
+/*                              Daily Log Button                              */
 /* -------------------------------------------------------------------------- */
 
 function DailyLogButton() {
@@ -141,8 +143,35 @@ function DailyLogButton() {
   );
 }
 
+/* -------------------------------------------------------------------------- */
+/*                               Overview Button                              */
+/* -------------------------------------------------------------------------- */
+
 function OverviewButton() {
-  return <></>;
+  const [isClicked, setIsClicked] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === `/overview`) {
+      setIsClicked(true);
+    } else {
+      setIsClicked(false);
+    }
+  }, [location.pathname]);
+
+  const handleClick = () => {
+    navigate(`/overview`);
+  };
+
+  return (
+    <button className="button__overview" onClick={handleClick}>
+      <img
+        src={isClicked ? OverviewIconActive : OverviewIconInactive}
+        alt={isClicked ? "overview icon active" : "overview icon inactive"}
+      />
+    </button>
+  );
 }
 
 /* -------------------------------------------------------------------------- */
