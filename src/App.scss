@@ -42,6 +42,10 @@ ul {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 // these text styles automatically add the correct specs from the variables.scss file
 
 h1 {

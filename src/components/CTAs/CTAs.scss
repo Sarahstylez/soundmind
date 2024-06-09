@@ -28,11 +28,13 @@
     background-color: transparent;
   }
 
-  &__back-arrow {
+  &__back-arrow,
+  &__export,
+  &__daily-log,
+  &__overview {
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer;
   }
 }
 
