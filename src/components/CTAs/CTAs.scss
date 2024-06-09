@@ -9,24 +9,57 @@
   border: none;
 
   /* Drop Shadow */
-  box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+  box-shadow: 0px 0px 22px 0px rgba(129, 154, 166, 0.08);
   backdrop-filter: blur(40px);
 
   &__primary {
     color: $color-primary-off-white;
     background-color: $color-primary-slate-grey;
+
+    &:active {
+      background-color: $color-primary-dsb;
+    }
+
+    &:hover {
+      background-color: $color-primary-dsb;
+    }
   }
 
   &__secondary {
     color: $color-primary-dsb;
     background-color: $color-primary-off-white;
+    &:active {
+      background-color: $color-secondary-champagne;
+      border: 1px solid $color-primary-dsb;
+    }
+
+    &:hover {
+      background-color: $color-secondary-champagne;
+      border: 1px solid $color-primary-dsb;
+    }
   }
+
+  /* -------------------------------------------------------------------------- */
+  /*                           Sign Up Button Styles 1                          */
+  /* -------------------------------------------------------------------------- */
 
   &__signup {
     text-decoration: underline;
     color: $color-secondary-olive;
     background-color: transparent;
+
+    &:active {
+      color: $color-primary-dsb;
+    }
+
+    &:hover {
+      color: $color-primary-dsb;
+    }
   }
+
+  /* -------------------------------------------------------------------------- */
+  /*                         Remove Normal Button Styles                        */
+  /* -------------------------------------------------------------------------- */
 
   &__back-arrow,
   &__export,
@@ -40,12 +73,20 @@
     flex: 1;
   }
 
+  /* -------------------------------------------------------------------------- */
+  /*                          Next Arrow Button Styles                          */
+  /* -------------------------------------------------------------------------- */
+
   &__next-arrow {
     @include flex();
     width: 2rem;
     height: 2rem;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                            Sign Up Button Styles 2                         */
+/* -------------------------------------------------------------------------- */
 
 .clear-button {
   width: 370px;
@@ -54,14 +95,33 @@
   backdrop-filter: blur(40px);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                          Select Month Button Styles                        */
+/* -------------------------------------------------------------------------- */
+
 .button-small {
+  @include flex(center, space-between);
+  padding: 0 $padding-xs;
   width: 370px;
   height: 50px;
-  border-radius: 0.8125rem;
+  border-radius: 0.6rem;
   border: 1px solid $color-primary-dark-sage;
   background-color: $color-primary-parchment;
+  color: $color-secondary-steel-blue;
 
   /* Drop Shadow */
-  box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+  box-shadow: 0px 0px 22px 0px rgba(129, 154, 166, 0.08);
   backdrop-filter: blur(40px);
+
+  &:active {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dsb;
+  }
+
+  &:hover {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dsb;
+  }
 }

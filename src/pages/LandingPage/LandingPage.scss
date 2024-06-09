@@ -25,9 +25,20 @@
   }
 }
 
+@keyframes background-move {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .logo {
   &__text {
     background-image: url(../../assets/logos/soundmind-text.svg);
+    background-repeat: repeat-x;
+    animation: background-move 16s linear infinite;
     height: 30rem;
     width: 100%;
   }
