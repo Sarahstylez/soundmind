@@ -60,6 +60,7 @@ textarea {
   padding: 0.75rem;
   border: 1px solid $color-primary-dark-sage;
   border-radius: 0.5625rem;
+  resize: none;
 
   /* h5 */
   font-size: 16px;
@@ -122,7 +123,7 @@ textarea {
 .dl {
   padding: 0 $padding-s;
   width: 88%;
-  height: 120rem;
+  height: 100%;
   &-form {
     &__title {
       color: $color-primary-slate-grey;

@@ -239,6 +239,46 @@ function SelectMonthButton({ month, onClick }) {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                              Experience Button                             */
+/* -------------------------------------------------------------------------- */
+
+function ExperienceButton({ month, onClick }) {
+  return (
+    <button className="button-small button__select-month" onClick={onClick}>
+      <h3>{month}</h3>
+      <img src={SmallArrowIcon} alt="small next arrow icon" />
+    </button>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Events Button                               */
+/* -------------------------------------------------------------------------- */
+
+function EventsButton({ month, onClick }) {
+  return (
+    <section className="button-events__container">
+      <button className="button-events" onClick={onClick}>
+        <h3>{month}</h3>
+        <img src={SmallArrowIcon} alt="small next arrow icon" />
+      </button>
+      <button className="button-events" onClick={onClick}>
+        <h3>{month}</h3>
+        <img src={SmallArrowIcon} alt="small next arrow icon" />
+      </button>
+      <button className="button-events" onClick={onClick}>
+        <h3>{month}</h3>
+        <img src={SmallArrowIcon} alt="small next arrow icon" />
+      </button>
+      <button className="button-events" onClick={onClick}>
+        <h3>{month}</h3>
+        <img src={SmallArrowIcon} alt="small next arrow icon" />
+      </button>
+    </section>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                 Export List                                */
 /* -------------------------------------------------------------------------- */
 
@@ -253,4 +293,6 @@ export {
   OverviewButton,
   NextArrow,
   SelectMonthButton,
+  ExperienceButton,
+  EventsButton,
 };

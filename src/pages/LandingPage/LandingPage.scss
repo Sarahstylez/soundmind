@@ -14,14 +14,14 @@
     flex-direction: column;
     width: 10rem;
     height: 10rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-left: 1.5rem;
   }
   &__CTAs {
     @include flex(center, space-between);
     flex-direction: column;
     height: 9rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 }
 
