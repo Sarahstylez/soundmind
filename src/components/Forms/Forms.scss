@@ -1,0 +1,167 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+@use "../../styles/partials/__utils" as *;
+
+/* -------------------------------------------------------------------------- */
+/*                             Log In Form Styles                             */
+/* -------------------------------------------------------------------------- */
+
+.login {
+  &__container {
+    padding: $padding-s;
+    width: 85%;
+  }
+  &__form {
+    flex-direction: column;
+    width: 100%;
+    &-container {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+    &-label {
+      /* h3 */
+      font-size: 20px;
+      line-height: 40px; // more line-height for form
+      font-family: "Lato Light";
+      color: $color-secondary-dsg;
+    }
+    &-input {
+      background-color: $color-primary-parchment;
+      opacity: 0.67;
+      width: 340px;
+      height: 35px;
+      padding: 0 0.75rem;
+      border: 1px solid $color-primary-dark-sage;
+      border-radius: 0.5625rem;
+      font-feature-settings: "clig" off, "liga" off;
+
+      /* h5 */
+      font-size: 16px;
+      line-height: 19px;
+      font-family: "Lato Regular";
+      color: $color-primary-dark-sage;
+
+      /* Drop Shadow */
+      box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+      backdrop-filter: blur(40px);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Daily Log Form Styles                           */
+/* -------------------------------------------------------------------------- */
+
+textarea {
+  background-color: $color-secondary-champagne;
+  opacity: 0.88;
+  width: 93%;
+  height: 6rem;
+  padding: 0.75rem;
+  border: 1px solid $color-primary-dark-sage;
+  border-radius: 0.5625rem;
+  resize: none;
+
+  /* h5 */
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato Regular";
+  color: $color-primary-dsb;
+
+  /* Drop Shadow */
+  box-shadow: 0px 0px 22px 0px rgba(79, 103, 117, 0.08);
+  backdrop-filter: blur(40px);
+
+  &:active {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dsb;
+  }
+
+  &:hover {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dsb;
+  }
+
+  &::placeholder {
+    color: $color-primary-dark-sage;
+  }
+}
+
+.checkbox-container {
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+
+    &:checked + .checkmark {
+      background-color: grey;
+      border-color: grey;
+    }
+  }
+
+  .checkmark {
+    height: 15px;
+    width: 15px;
+    background-color: $color-secondary-champagne;
+    border: 1px solid $color-primary-dark-sage;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+  }
+}
+
+.dl {
+  padding: 0 $padding-s;
+  width: 88%;
+  height: 100%;
+  &-form {
+    &__title {
+      color: $color-primary-slate-grey;
+      padding: $padding-s 0;
+    }
+    &__container {
+      background-color: $color-secondary-champagne;
+      opacity: 0.88;
+      width: 82%;
+      height: 100%;
+      padding: 2rem;
+      border: 1px solid $color-primary-dark-sage;
+      border-radius: 0.5625rem;
+      &-category {
+        padding-bottom: 2rem;
+      }
+    }
+
+    &__checklist {
+      @include flex(start, start);
+      flex-direction: column;
+      padding-top: $padding-xs;
+      &-text {
+        padding: $padding-xxs 0;
+        /* p text styles*/
+
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "Lato Regular";
+        color: $color-primary-dark-sage;
+      }
+    }
+    &__CTAs {
+      @include flex(center, space-between);
+      flex-direction: column;
+      padding: $padding-l 0;
+      width: 100%;
+      height: 9rem;
+    }
+  }
+}

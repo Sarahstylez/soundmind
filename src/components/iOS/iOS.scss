@@ -1,0 +1,24 @@
+@use "../../styles/partials/__variables.scss" as *;
+@use "../../styles/partials/__mixins.scss" as *;
+
+.persistent-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  @include flex();
+  z-index: 2000; // Ensure it is on top of other elements
+
+  &__top {
+    top: 0;
+  }
+
+  &__bottom {
+    bottom: 0;
+  }
+}
+
+.home-indicator,
+.status-bar {
+  width: 430px; // Adjust the size as needed
+  // Add any other styles you need
+}

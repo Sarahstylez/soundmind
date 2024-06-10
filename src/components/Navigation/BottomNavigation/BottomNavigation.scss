@@ -1,0 +1,19 @@
+@use "../../../styles/partials/__variables" as *;
+@use "../../../styles/partials/__mixins" as *;
+@use "../../../styles/partials/__utils" as *;
+
+.bottom-nav {
+  @include flex();
+  width: 430px;
+  height: 7rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  border-top: 0.5px solid $color-primary-dsb;
+  background-color: $color-secondary-champagne;
+
+  &__container {
+    @include flex(center, space-between);
+    width: 100%;
+  }
+}

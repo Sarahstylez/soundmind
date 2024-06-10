@@ -1,0 +1,25 @@
+@use "../../../styles/partials/__variables" as *;
+@use "../../../styles/partials/__mixins" as *;
+@use "../../../styles/partials/__utils" as *;
+
+.top-nav {
+  width: 430px;
+  height: 12rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 0.5px solid $color-primary-dsb;
+  background-color: $color-primary-parchment;
+
+  &__CTA {
+    width: 88%;
+    padding: $padding-s;
+    padding-top: 3rem;
+  }
+
+  &__container {
+    @include flex(end, space-between);
+    padding: $padding-xs $padding-s;
+    width: 88%;
+  }
+}
