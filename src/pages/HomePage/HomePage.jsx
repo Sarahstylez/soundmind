@@ -13,30 +13,28 @@ function HomePage() {
   const currentMonth = new Date().getMonth() + 1; // getMonth() returns 0-11, so add 1 to get 1-12
 
   return (
-    <>
-      <section className="home">
-        <section className="home-insights"></section>
-        <section className="home-daily-log">
-          <div className="home-daily-log__title">
-            <h3>Daily Log</h3>
-            <Link to={`/dailylog/${currentMonth}`}>
-              <NextArrow />
-            </Link>
-          </div>
-        </section>
-        <section className="home-overview">
-          <div className="home-overview__title">
-            <h3>Overview</h3>
-            <Link to={`/overview/${currentMonth}`}>
-              <NextArrow />
-            </Link>
-          </div>
-          <div className="home-overview__chart">
-            <BarChart />
-          </div>
-        </section>
+    <section className="home">
+      <section className="home-insights"></section>
+      <section className="home-daily-log">
+        <div className="home-daily-log__title">
+          <h3>Daily Log</h3>
+          <Link to={`/dailylog/${currentMonth}`}>
+            <NextArrow />
+          </Link>
+        </div>
       </section>
-    </>
+      <section className="home-overview">
+        <div className="home-overview__title">
+          <h3>Overview</h3>
+          <Link to={`/overview/${currentMonth}`}>
+            <NextArrow />
+          </Link>
+        </div>
+        <div className="home-overview__chart">
+          <BarChart />
+        </div>
+      </section>
+    </section>
   );
 }
 

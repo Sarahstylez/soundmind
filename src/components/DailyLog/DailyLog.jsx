@@ -9,11 +9,11 @@ function DailyLog() {
   }, []);
 
   return (
-    <>
+    <div className="daily-log__container">
       <section className="daily-log">
         <DailyLogForm />
       </section>
-    </>
+    </div>
   );
 }
 

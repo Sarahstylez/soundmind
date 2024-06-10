@@ -3,8 +3,10 @@
 @use "../../styles/partials/__utils" as *;
 
 .login {
-  @include flex();
+  @include flex(center, start);
   flex-direction: column;
+  height: 952px;
+  padding-top: 4rem;
   &__CTAs {
     @include flex(center, space-between);
     flex-direction: column;
@@ -16,7 +18,6 @@
 .title {
   @include flex(start, space-between);
   width: 85%;
-  margin-top: 3rem;
   padding: $padding-m $padding-s;
   &__text {
     @include flex(end, space-between);
