@@ -6,13 +6,32 @@ import { BackArrow } from "../../../components/CTAs/CTAs";
 function TopNavigation() {
   const location = useLocation();
 
+  const monthToNameMap = {
+    1: "january",
+    2: "february",
+    3: "march",
+    4: "april",
+    5: "may",
+    6: "june",
+    7: "july",
+    8: "august",
+    9: "september",
+    10: "october",
+    11: "november",
+    12: "december",
+  };
+
   const getTitle = () => {
     const path = location.pathname;
     if (path === "/home") return "welcome back";
     if (path === "/settings") return "settings";
     if (path.startsWith("/dailylog/")) return "daily log";
     if (path === "/overview") return "overview";
-    if (path.startsWith("/overview/")) return path.split("/")[2]; // Assuming :id is the third segment
+    if (path.startsWith("/overview/")) {
+      const id = path.split("/")[2];
+      const month = parseInt(id, 10);
+      return monthToNameMap[month] || "";
+    }
     return "";
   };
 

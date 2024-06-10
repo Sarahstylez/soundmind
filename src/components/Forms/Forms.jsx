@@ -91,24 +91,48 @@ const DailyLogForm = () => {
     experienceCategoryNames: {},
   });
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    fetch("./data/symptoms.json")
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/symptoms.json");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
         setFormData({
-          description: data.description,
-          symptomChecklist: data.symptomChecklist,
-          experienceChecklist: data.experienceChecklist,
-          events: data.events,
+          description: data.description || "",
+          symptomChecklist: data.symptomChecklist || {
+            category1: [],
+            category2: [],
+            category3: [],
+            category4: [],
+            category5: [],
+          },
+          experienceChecklist: data.experienceChecklist || {
+            category1: [],
+            category2: [],
+            category3: [],
+            category4: [],
+            category5: [],
+          },
+          events: data.events || "",
         });
         setCategories({
-          symptomCategories: data.symptomCategories,
-          experienceCategories: data.experienceCategories,
-          categoryNames: data.categoryNames,
-          experienceCategoryNames: data.experienceCategoryNames,
+          symptomCategories: data.symptomCategories || {},
+          experienceCategories: data.experienceCategories || {},
+          categoryNames: data.categoryNames || {},
+          experienceCategoryNames: data.experienceCategoryNames || {},
         });
-      })
-      .catch((error) => console.error("Error fetching form data:", error));
+      } catch (error) {
+        console.error("Error fetching form data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handleInputChange = (e) => {
@@ -133,6 +157,10 @@ const DailyLogForm = () => {
     e.preventDefault();
     console.log(formData);
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="dl">

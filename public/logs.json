@@ -234,45 +234,6 @@
         "Medication Adherence": 4,
         "Notable Events Correlation": 2
       }
-    },
-    {
-      "month_id": 7,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "rarely",
-        "Average Distraction Levels": "sometimes",
-        "Task Switching Frequency": "often",
-        "Organization Difficulty": "rarely"
-      },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "often",
-        "Seating Inability Frequency": "sometimes",
-        "Talking Excessively Frequency": "rarely",
-        "Interrupting Others Frequency": "often"
-      },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "sometimes",
-        "Irritability Levels": "often",
-        "Sensitivity to Criticism": "rarely"
-      },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "sometimes",
-        "Misplacing Items Frequency": "often",
-        "Time Management Difficulty": "rarely",
-        "Procrastination Levels": "sometimes"
-      },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "rarely",
-        "Fatigue Levels": "often",
-        "Physical Symptoms": "sometimes"
-      },
-      "User Experience Tracking": {
-        "Mood Trends": 4,
-        "Energy Trends": 4,
-        "Stress Trends": 3,
-        "Sleep Quality Trends": 4,
-        "Medication Adherence": 4,
-        "Notable Events Correlation": 3
-      }
     }
   ]
 }

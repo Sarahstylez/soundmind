@@ -18,9 +18,14 @@ import { NextArrow } from "./components/CTAs/CTAs";
 const MainApp = () => {
   const location = useLocation();
   const isDailyLogRoute = location.pathname.startsWith("/dailylog/");
+  const isOverviewMonthRoute = location.pathname.startsWith("/overview/");
 
   return (
-    <div className={`App ${isDailyLogRoute ? "daily-log-height" : ""}`}>
+    <div
+      className={`App ${isDailyLogRoute ? "daily-log-height" : ""} ${
+        isOverviewMonthRoute ? "overview-month-height" : ""
+      }`}
+    >
       <Viewport>
         <NavigationWrapper>
           <Routes>

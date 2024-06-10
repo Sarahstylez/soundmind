@@ -66,7 +66,8 @@
   &__daily-log,
   &__overview,
   &__next-arrow,
-  &__home {
+  &__home,
+  &__events {
     background: none;
     border: none;
     padding: 0;
@@ -123,5 +124,55 @@
     color: $color-primary-dsb;
     background-color: $color-secondary-champagne;
     border: 1px solid $color-primary-dsb;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Events Button Styles                            */
+/* -------------------------------------------------------------------------- */
+
+.button-events {
+  @include flex(center, space-between);
+  padding: 0 $padding-xs;
+  width: 360px;
+  height: 50px;
+  border: none;
+  border-bottom: 0.5px solid $color-secondary-light-sage;
+  background-color: $color-primary-parchment;
+  color: $color-secondary-steel-blue;
+  &:active {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+  }
+
+  &:hover {
+    color: $color-primary-dsb;
+    background-color: $color-secondary-champagne;
+  }
+
+  &__container {
+    @include flex();
+    flex-direction: column;
+    width: 370px;
+    height: 200px;
+    background-color: $color-primary-parchment;
+    border-radius: 0.6rem;
+    border: 1px solid $color-primary-dark-sage;
+
+    /* Drop Shadow */
+    box-shadow: 0px 0px 22px 0px rgba(129, 154, 166, 0.08);
+    backdrop-filter: blur(40px);
+
+    &:active {
+      color: $color-primary-dsb;
+      background-color: $color-secondary-champagne;
+      border: 1px solid $color-primary-dsb;
+    }
+
+    &:hover {
+      color: $color-primary-dsb;
+      background-color: $color-secondary-champagne;
+      border: 1px solid $color-primary-dsb;
+    }
   }
 }

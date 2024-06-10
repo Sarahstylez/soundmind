@@ -1,15 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Overview.scss";
 import { SelectMonthButton } from "../CTAs/CTAs";
-import logsData from "../../data/logs.json";
 
 function Overview() {
-  useEffect(() => {
-    // Scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
-
+  const [logsData, setLogsData] = useState(null);
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
@@ -28,9 +23,23 @@ function Overview() {
     12: "December",
   };
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+
+    fetch("/logs.json")
+      .then((response) => response.json())
+      .then((data) => setLogsData(data))
+      .catch((error) => console.error("Error fetching logs data:", error));
+  }, []);
+
   const handleMonthClick = (monthId) => {
     navigate(`/overview/${monthId}`);
   };
+
+  if (!logsData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="overview">
