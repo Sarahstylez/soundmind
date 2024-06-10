@@ -1,8 +1,8 @@
 # SoundMind App
 
-### Trello Link:
+### Figma Prototype Link:
 
-https://trello.com/b/P70uWLwz/soundmind-an-adhd-symptom-tracker
+https://www.figma.com/proto/nB7LRQ7pfrN0N8dQbZoAQ6/SoundMind---Planning?page-id=3%3A4&node-id=142-2125&viewport=479%2C407%2C0.21&t=Squ3aZJQOIEl2RT3-1&scaling=scale-down&starting-point-node-id=142%3A2125&show-proto-sidebar=1
 
 ---
 
