@@ -10,14 +10,13 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   scroll-behavior: smooth;
   @include flex();
 }
 
 .App {
   width: 430px;
-  height: 866px;
+  height: auto;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
@@ -28,17 +27,18 @@ html {
     #f1efec 74.29%,
     #e7dede 102.8%
   );
-  padding-top: 4rem;
+  // padding-top: 4rem;
 
-  &.daily-log-height {
-    height: 212rem;
-    overflow: visible;
-  }
+  //   &.daily-log-height {
+  //     overflow: scroll;
+  //     height: 4000px;
+  //   }
+  //   //   position: relative;
 
-  &.overview-month-height {
-    height: 176rem;
-    overflow: visible;
-  }
+  //   &.overview-month-height {
+  //     height: 200%;
+  //     // overflow: visible;
+  //   }
 }
 
 /* -------------------------------------------------------------------------- */

@@ -14,23 +14,23 @@ function HomePage() {
 
   return (
     <section className="home">
-      <section className="home-insights"></section>
-      <section className="home-daily-log">
-        <div className="home-daily-log__title">
+      <section className="home__insights"></section>
+      <section className="home__daily-log">
+        <div className="home__daily-log-title">
           <h3>Daily Log</h3>
           <Link to={`/dailylog/${currentMonth}`}>
             <NextArrow />
           </Link>
         </div>
       </section>
-      <section className="home-overview">
-        <div className="home-overview__title">
+      <section className="home__overview">
+        <div className="home__overview-title">
           <h3>Overview</h3>
           <Link to={`/overview/${currentMonth}`}>
             <NextArrow />
           </Link>
         </div>
-        <div className="home-overview__chart">
+        <div className="home__overview-chart">
           <BarChart />
         </div>
       </section>

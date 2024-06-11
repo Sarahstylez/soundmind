@@ -1,7 +1,7 @@
 import "./Settings.scss";
 
 function Settings() {
-  return <></>;
+  return <section className="settings"></section>;
 }
 
 export default Settings;

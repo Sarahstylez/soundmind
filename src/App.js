@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Overlay from "./components/iOS/iOS";
 import LandingPage from "./pages/LandingPage/LandingPage";
@@ -15,16 +15,8 @@ import NavigationWrapper from "./components/NavigationWrapper/NavigationWrapper"
 import { NextArrow } from "./components/CTAs/CTAs";
 
 const MainApp = () => {
-  const location = useLocation();
-  const isDailyLogRoute = location.pathname.startsWith("/dailylog/");
-  const isOverviewMonthRoute = location.pathname.startsWith("/overview/");
-
   return (
-    <div
-      className={`App ${isDailyLogRoute ? "daily-log-height" : ""} ${
-        isOverviewMonthRoute ? "overview-month-height" : ""
-      }`}
-    >
+    <div className="App">
       <NavigationWrapper>
         <Routes>
           <Route path="/" element={<LandingPage />} />

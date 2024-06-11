@@ -6,8 +6,8 @@
   @include flex();
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  padding-top: 13rem;
+  height: 900px;
+  padding-top: 1rem;
 
   &__title {
     @include flex(center, start);
@@ -21,7 +21,7 @@
     flex-direction: column;
     width: 100%;
     height: 30rem;
-    position: relative;
-    z-index: 10;
+    // position: relative;
+    // z-index: 10;
   }
 }
