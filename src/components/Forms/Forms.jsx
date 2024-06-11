@@ -96,7 +96,7 @@ const DailyLogForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/symptoms.json");
+        const response = await fetch("/api/form-data");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
