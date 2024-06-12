@@ -9,6 +9,7 @@ const NavigationWrapper = ({ children }) => {
     "/settings",
     "/dailylog/",
     "/overview/",
+    "/overview",
   ];
 
   const showNavigation = pathnamesToShowNavigation.some(
