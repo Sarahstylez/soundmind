@@ -94,6 +94,7 @@ function DailyLogForm(props) {
   });
 
   const [loading, setLoading] = useState(true);
+  const [editMode, setEditMode] = useState(true); // Start in edit mode
 
   useEffect(() => {
     const fetchData = async () => {
@@ -103,24 +104,32 @@ function DailyLogForm(props) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        setFormData({
-          description: data.description || "",
-          symptomChecklist: data.symptomChecklist || {
-            category1: [],
-            category2: [],
-            category3: [],
-            category4: [],
-            category5: [],
-          },
-          experienceChecklist: data.experienceChecklist || {
-            category1: [],
-            category2: [],
-            category3: [],
-            category4: [],
-            category5: [],
-          },
-          events: data.events || "",
-        });
+
+        // Check if there's saved data in local storage
+        const savedData = localStorage.getItem(`dailyLog-${id}`);
+        if (savedData) {
+          setFormData(JSON.parse(savedData));
+        } else {
+          setFormData({
+            description: data.description || "",
+            symptomChecklist: data.symptomChecklist || {
+              category1: [],
+              category2: [],
+              category3: [],
+              category4: [],
+              category5: [],
+            },
+            experienceChecklist: data.experienceChecklist || {
+              category1: [],
+              category2: [],
+              category3: [],
+              category4: [],
+              category5: [],
+            },
+            events: data.events || "",
+          });
+        }
+
         setCategories({
           symptomCategories: data.symptomCategories || {},
           experienceCategories: data.experienceCategories || {},
@@ -135,7 +144,7 @@ function DailyLogForm(props) {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -144,37 +153,47 @@ function DailyLogForm(props) {
 
   const handleCheckboxChange = (e, category, type) => {
     const { name, checked } = e.target;
-    setFormData({
-      ...formData,
-      [type]: {
-        ...formData[type],
-        [category]: checked
-          ? [...formData[type][category], name]
-          : formData[type][category].filter((item) => item !== name),
-      },
-    });
+
+    if (type === "experienceChecklist") {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [type]: {
+          ...prevFormData[type],
+          [category]: checked ? [name] : [],
+        },
+      }));
+    } else {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [type]: {
+          ...prevFormData[type],
+          [category]: checked
+            ? [...prevFormData[type][category], name]
+            : prevFormData[type][category].filter((item) => item !== name),
+        },
+      }));
+    }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(`/api/dailylog/${id}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      console.log("Success:", data);
-      // Optionally, handle success (e.g., show a success message or redirect)
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      // Optionally, handle error (e.g., show an error message)
-    }
+
+    // Log the form data to the console
+    console.log("Form Data Submitted:", JSON.stringify(formData, null, 2));
+
+    // Store the form data in local storage
+    localStorage.setItem(`dailyLog-${id}`, JSON.stringify(formData));
+
+    // Optionally, handle success (e.g., show a success message)
+    alert("Form data has been saved locally.");
+
+    // Switch to view mode
+    setEditMode(false);
+  };
+
+  const handleEdit = (e) => {
+    e.preventDefault();
+    setEditMode(true);
   };
 
   if (loading) {
@@ -183,17 +202,21 @@ function DailyLogForm(props) {
 
   return (
     <section className="dl">
-      <form className="dl-form" onSubmit={handleSubmit}>
+      <form className="dl-form" onSubmit={editMode ? handleSubmit : handleEdit}>
         <section className="dl-form__description">
           <label>
             <h3 className="dl-form__title">How are you feeling, really?</h3>
-            <textarea
-              name="description"
-              value={formData.description}
-              onChange={handleInputChange}
-              rows="3"
-              placeholder="Write 1-2 sentences describing your day."
-            />
+            {editMode ? (
+              <textarea
+                name="description"
+                value={formData.description}
+                onChange={handleInputChange}
+                rows="3"
+                placeholder="Write 1-2 sentences describing your day."
+              />
+            ) : (
+              <p>{formData.description}</p>
+            )}
           </label>
         </section>
         <section className="dl-form__symptoms">
@@ -217,6 +240,7 @@ function DailyLogForm(props) {
                         onChange={(e) =>
                           handleCheckboxChange(e, category, "symptomChecklist")
                         }
+                        disabled={!editMode} // Disable checkbox when not in edit mode
                       />{" "}
                       <span className="checkmark"></span>
                       {symptom}
@@ -254,6 +278,7 @@ function DailyLogForm(props) {
                               "experienceChecklist"
                             )
                           }
+                          disabled={!editMode} // Disable checkbox when not in edit mode
                         />
                         <span className="checkmark"></span>
                         {experience}
@@ -269,17 +294,21 @@ function DailyLogForm(props) {
         <section className="dl-form__events">
           <label>
             <h3 className="dl-form__title">Anything else to add?</h3>
-            <textarea
-              name="events"
-              value={formData.events}
-              onChange={handleInputChange}
-              rows="5"
-              placeholder="Include any additional notes about today and the events that occurred."
-            />
+            {editMode ? (
+              <textarea
+                name="events"
+                value={formData.events}
+                onChange={handleInputChange}
+                rows="5"
+                placeholder="Include any additional notes about today and the events that occurred."
+              />
+            ) : (
+              <p>{formData.events}</p>
+            )}
           </label>
         </section>
         <section className="dl-form__CTAs">
-          <PrimaryButton label="Save" onClick={handleSubmit} />
+          <PrimaryButton label={editMode ? "Save" : "Edit"} type="submit" />
           <Link to="/home">
             <SecondaryButton label="Cancel" />
           </Link>
