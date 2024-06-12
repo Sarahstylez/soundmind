@@ -1,239 +1,885 @@
-{
-  "user": "Alex Sharp",
-  "symptoms": [
-    {
-      "month_id": 1,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "often",
-        "Average Distraction Levels": "sometimes",
-        "Task Switching Frequency": "often",
-        "Organization Difficulty": "rarely"
+[
+  {
+    "user": "Alex Sharp",
+    "months": [
+      {
+        "month_id": "1",
+        "logs": []
       },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "sometimes",
-        "Seating Inability Frequency": "rarely",
-        "Talking Excessively Frequency": "often",
-        "Interrupting Others Frequency": "sometimes"
+      {
+        "month_id": "2",
+        "logs": []
       },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "rarely",
-        "Irritability Levels": "sometimes",
-        "Sensitivity to Criticism": "often"
+      {
+        "month_id": "3",
+        "logs": []
       },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "often",
-        "Misplacing Items Frequency": "rarely",
-        "Time Management Difficulty": "sometimes",
-        "Procrastination Levels": "often"
+      {
+        "month_id": "4",
+        "logs": []
       },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "rarely",
-        "Fatigue Levels": "sometimes",
-        "Physical Symptoms": "often"
+      {
+        "month_id": "5",
+        "logs": [
+          {
+            "id": "1",
+            "description": "Daily entry for day 1",
+            "symptomChecklist": {
+              "category1": ["Forgetfulness", "Losing track of time"],
+              "category2": ["Fidgeting", "Impulsivity"],
+              "category3": ["Easily frustrated", "Overwhelmed"],
+              "category4": ["Messy workspace", "Poor planning"],
+              "category5": ["Back pain", "Eye strain"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 1"
+          },
+          {
+            "id": "2",
+            "description": "Daily entry for day 2",
+            "symptomChecklist": {
+              "category1": ["Difficulty focusing", "Daydreaming"],
+              "category2": ["Interrupting others", "Talking fast"],
+              "category3": ["Mood swings", "Sensitivity to noise"],
+              "category4": ["Disorganization", "Missing deadlines"],
+              "category5": ["Low energy", "Headaches"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 2"
+          },
+          {
+            "id": "3",
+            "description": "Daily entry for day 3",
+            "symptomChecklist": {
+              "category1": ["Difficulty reading", "Skipping tasks"],
+              "category2": ["Hyperactivity", "Restlessness"],
+              "category3": ["Anxiety", "Quick temper"],
+              "category4": ["Forgetting appointments", "Disorganized notes"],
+              "category5": ["Insomnia", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "1 - Terrible",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 3"
+          },
+          {
+            "id": "4",
+            "description": "Daily entry for day 4",
+            "symptomChecklist": {
+              "category1": ["Easily bored", "Not completing tasks"],
+              "category2": ["Interrupting", "Acting without thinking"],
+              "category3": ["Mood swings", "Easily annoyed"],
+              "category4": ["Procrastination", "Losing items"],
+              "category5": ["Tiredness", "Muscle tension"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 4"
+          },
+          {
+            "id": "5",
+            "description": "Daily entry for day 5",
+            "symptomChecklist": {
+              "category1": ["Daydreaming", "Not listening"],
+              "category2": ["Impulsive spending", "Excessive talking"],
+              "category3": ["Frequent crying", "Feeling guilty"],
+              "category4": ["Messy room", "Poor hygiene"],
+              "category5": ["Lack of appetite", "Nausea"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 5"
+          },
+          {
+            "id": "6",
+            "description": "Daily entry for day 6",
+            "symptomChecklist": {
+              "category1": ["Procrastination", "Difficulty starting tasks"],
+              "category2": ["Interrupting others", "Hyperactivity"],
+              "category3": ["Irritability", "Feeling overwhelmed"],
+              "category4": ["Misplacing things", "Poor memory"],
+              "category5": ["Headaches", "Dizziness"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "3 - Average",
+              "category5": "Yes"
+            },
+            "events": "Events for day 6"
+          },
+          {
+            "id": "7",
+            "description": "Daily entry for day 7",
+            "symptomChecklist": {
+              "category1": ["Lack of focus", "Inattention"],
+              "category2": ["Restlessness", "Fidgeting"],
+              "category3": ["Sadness", "Mood swings"],
+              "category4": ["Disorganization", "Missed appointments"],
+              "category5": ["Stomach pain", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 7"
+          },
+          {
+            "id": "8",
+            "description": "Daily entry for day 8",
+            "symptomChecklist": {
+              "category1": ["Difficulty reading", "Skipping tasks"],
+              "category2": ["Hyperactivity", "Restlessness"],
+              "category3": ["Anxiety", "Quick temper"],
+              "category4": ["Forgetting appointments", "Disorganized notes"],
+              "category5": ["Insomnia", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "1 - Terrible",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 8"
+          },
+          {
+            "id": "9",
+            "description": "Daily entry for day 9",
+            "symptomChecklist": {
+              "category1": ["Easily bored", "Not completing tasks"],
+              "category2": ["Interrupting", "Acting without thinking"],
+              "category3": ["Mood swings", "Easily annoyed"],
+              "category4": ["Procrastination", "Losing items"],
+              "category5": ["Tiredness", "Muscle tension"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 9"
+          },
+          {
+            "id": "10",
+            "description": "Daily entry for day 10",
+            "symptomChecklist": {
+              "category1": ["Daydreaming", "Not listening"],
+              "category2": ["Impulsive spending", "Excessive talking"],
+              "category3": ["Frequent crying", "Feeling guilty"],
+              "category4": ["Messy room", "Poor hygiene"],
+              "category5": ["Lack of appetite", "Nausea"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 10"
+          },
+          {
+            "id": "11",
+            "description": "Daily entry for day 11",
+            "symptomChecklist": {
+              "category1": ["Procrastination", "Difficulty starting tasks"],
+              "category2": ["Interrupting others", "Hyperactivity"],
+              "category3": ["Irritability", "Feeling overwhelmed"],
+              "category4": ["Misplacing things", "Poor memory"],
+              "category5": ["Headaches", "Dizziness"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "3 - Average",
+              "category5": "Yes"
+            },
+            "events": "Events for day 11"
+          },
+          {
+            "id": "12",
+            "description": "Daily entry for day 12",
+            "symptomChecklist": {
+              "category1": ["Forgetfulness", "Losing track of time"],
+              "category2": ["Fidgeting", "Impulsivity"],
+              "category3": ["Easily frustrated", "Overwhelmed"],
+              "category4": ["Messy workspace", "Poor planning"],
+              "category5": ["Back pain", "Eye strain"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 12"
+          },
+          {
+            "id": "13",
+            "description": "Daily entry for day 13",
+            "symptomChecklist": {
+              "category1": ["Difficulty focusing", "Daydreaming"],
+              "category2": ["Interrupting others", "Talking fast"],
+              "category3": ["Mood swings", "Sensitivity to noise"],
+              "category4": ["Disorganization", "Missing deadlines"],
+              "category5": ["Low energy", "Headaches"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 13"
+          },
+          {
+            "id": "14",
+            "description": "Daily entry for day 14",
+            "symptomChecklist": {
+              "category1": ["Difficulty reading", "Skipping tasks"],
+              "category2": ["Hyperactivity", "Restlessness"],
+              "category3": ["Anxiety", "Quick temper"],
+              "category4": ["Forgetting appointments", "Disorganized notes"],
+              "category5": ["Insomnia", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "1 - Terrible",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 14"
+          },
+          {
+            "id": "15",
+            "description": "Daily entry for day 15",
+            "symptomChecklist": {
+              "category1": ["Easily bored", "Not completing tasks"],
+              "category2": ["Interrupting", "Acting without thinking"],
+              "category3": ["Mood swings", "Easily annoyed"],
+              "category4": ["Procrastination", "Losing items"],
+              "category5": ["Tiredness", "Muscle tension"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 15"
+          },
+          {
+            "id": "16",
+            "description": "Daily entry for day 16",
+            "symptomChecklist": {
+              "category1": ["Daydreaming", "Not listening"],
+              "category2": ["Impulsive spending", "Excessive talking"],
+              "category3": ["Frequent crying", "Feeling guilty"],
+              "category4": ["Messy room", "Poor hygiene"],
+              "category5": ["Lack of appetite", "Nausea"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 16"
+          },
+          {
+            "id": "17",
+            "description": "Daily entry for day 17",
+            "symptomChecklist": {
+              "category1": ["Procrastination", "Difficulty starting tasks"],
+              "category2": ["Interrupting others", "Hyperactivity"],
+              "category3": ["Irritability", "Feeling overwhelmed"],
+              "category4": ["Misplacing things", "Poor memory"],
+              "category5": ["Headaches", "Dizziness"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "3 - Average",
+              "category5": "Yes"
+            },
+            "events": "Events for day 17"
+          },
+          {
+            "id": "18",
+            "description": "Daily entry for day 18",
+            "symptomChecklist": {
+              "category1": ["Lack of focus", "Inattention"],
+              "category2": ["Restlessness", "Fidgeting"],
+              "category3": ["Sadness", "Mood swings"],
+              "category4": ["Disorganization", "Missed appointments"],
+              "category5": ["Stomach pain", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 18"
+          },
+          {
+            "id": "19",
+            "description": "Daily entry for day 19",
+            "symptomChecklist": {
+              "category1": ["Difficulty reading", "Skipping tasks"],
+              "category2": ["Hyperactivity", "Restlessness"],
+              "category3": ["Anxiety", "Quick temper"],
+              "category4": ["Forgetting appointments", "Disorganized notes"],
+              "category5": ["Insomnia", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "1 - Terrible",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 19"
+          },
+          {
+            "id": "20",
+            "description": "Daily entry for day 20",
+            "symptomChecklist": {
+              "category1": ["Easily bored", "Not completing tasks"],
+              "category2": ["Interrupting", "Acting without thinking"],
+              "category3": ["Mood swings", "Easily annoyed"],
+              "category4": ["Procrastination", "Losing items"],
+              "category5": ["Tiredness", "Muscle tension"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 20"
+          },
+          {
+            "id": "21",
+            "description": "Daily entry for day 21",
+            "symptomChecklist": {
+              "category1": ["Daydreaming", "Not listening"],
+              "category2": ["Impulsive spending", "Excessive talking"],
+              "category3": ["Frequent crying", "Feeling guilty"],
+              "category4": ["Messy room", "Poor hygiene"],
+              "category5": ["Lack of appetite", "Nausea"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 21"
+          },
+          {
+            "id": "22",
+            "description": "Daily entry for day 22",
+            "symptomChecklist": {
+              "category1": ["Procrastination", "Difficulty starting tasks"],
+              "category2": ["Interrupting others", "Hyperactivity"],
+              "category3": ["Irritability", "Feeling overwhelmed"],
+              "category4": ["Misplacing things", "Poor memory"],
+              "category5": ["Headaches", "Dizziness"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "3 - Average",
+              "category5": "Yes"
+            },
+            "events": "Events for day 22"
+          },
+          {
+            "id": "23",
+            "description": "Daily entry for day 23",
+            "symptomChecklist": {
+              "category1": ["Forgetfulness", "Losing track of time"],
+              "category2": ["Fidgeting", "Impulsivity"],
+              "category3": ["Easily frustrated", "Overwhelmed"],
+              "category4": ["Messy workspace", "Poor planning"],
+              "category5": ["Back pain", "Eye strain"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 23"
+          },
+          {
+            "id": "24",
+            "description": "Daily entry for day 24",
+            "symptomChecklist": {
+              "category1": ["Difficulty focusing", "Daydreaming"],
+              "category2": ["Interrupting others", "Talking fast"],
+              "category3": ["Mood swings", "Sensitivity to noise"],
+              "category4": ["Disorganization", "Missing deadlines"],
+              "category5": ["Low energy", "Headaches"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 24"
+          },
+          {
+            "id": "25",
+            "description": "Daily entry for day 25",
+            "symptomChecklist": {
+              "category1": ["Difficulty reading", "Skipping tasks"],
+              "category2": ["Hyperactivity", "Restlessness"],
+              "category3": ["Anxiety", "Quick temper"],
+              "category4": ["Forgetting appointments", "Disorganized notes"],
+              "category5": ["Insomnia", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "1 - Terrible",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 25"
+          },
+          {
+            "id": "26",
+            "description": "Daily entry for day 26",
+            "symptomChecklist": {
+              "category1": ["Easily bored", "Not completing tasks"],
+              "category2": ["Interrupting", "Acting without thinking"],
+              "category3": ["Mood swings", "Easily annoyed"],
+              "category4": ["Procrastination", "Losing items"],
+              "category5": ["Tiredness", "Muscle tension"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 26"
+          },
+          {
+            "id": "27",
+            "description": "Daily entry for day 27",
+            "symptomChecklist": {
+              "category1": ["Daydreaming", "Not listening"],
+              "category2": ["Impulsive spending", "Excessive talking"],
+              "category3": ["Frequent crying", "Feeling guilty"],
+              "category4": ["Messy room", "Poor hygiene"],
+              "category5": ["Lack of appetite", "Nausea"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 27"
+          },
+          {
+            "id": "28",
+            "description": "Daily entry for day 28",
+            "symptomChecklist": {
+              "category1": ["Procrastination", "Difficulty starting tasks"],
+              "category2": ["Interrupting others", "Hyperactivity"],
+              "category3": ["Irritability", "Feeling overwhelmed"],
+              "category4": ["Misplacing things", "Poor memory"],
+              "category5": ["Headaches", "Dizziness"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "3 - Average",
+              "category5": "Yes"
+            },
+            "events": "Events for day 28"
+          },
+          {
+            "id": "29",
+            "description": "Daily entry for day 29",
+            "symptomChecklist": {
+              "category1": ["Lack of focus", "Inattention"],
+              "category2": ["Restlessness", "Fidgeting"],
+              "category3": ["Sadness", "Mood swings"],
+              "category4": ["Disorganization", "Missed appointments"],
+              "category5": ["Stomach pain", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 29"
+          },
+          {
+            "id": "30",
+            "description": "Daily entry for day 30",
+            "symptomChecklist": {
+              "category1": ["Difficulty reading", "Skipping tasks"],
+              "category2": ["Hyperactivity", "Restlessness"],
+              "category3": ["Anxiety", "Quick temper"],
+              "category4": ["Forgetting appointments", "Disorganized notes"],
+              "category5": ["Insomnia", "Fatigue"]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "1 - Terrible",
+              "category4": "2 - Poor",
+              "category5": "Yes"
+            },
+            "events": "Events for day 30"
+          },
+          {
+            "id": "31",
+            "description": "Daily entry for day 31",
+            "symptomChecklist": {
+              "category1": ["Easily bored", "Not completing tasks"],
+              "category2": ["Interrupting", "Acting without thinking"],
+              "category3": ["Mood swings", "Easily annoyed"],
+              "category4": ["Procrastination", "Losing items"],
+              "category5": ["Tiredness", "Muscle tension"]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "No"
+            },
+            "events": "Events for day 31"
+          }
+        ]
       },
-      "User Experience Tracking": {
-        "Mood Trends": 3,
-        "Energy Trends": 3,
-        "Stress Trends": 4,
-        "Sleep Quality Trends": 3,
-        "Medication Adherence": 4,
-        "Notable Events Correlation": 2
+      {
+        "month_id": "6",
+        "logs": [
+          {
+            "id": "1",
+            "description": "Daily entry for day 1",
+            "symptomChecklist": {
+              "category1": [
+                "Difficulty sustaining attention",
+                "Frequently switching tasks"
+              ],
+              "category2": ["Inability to stay seated", "Interrupting others"],
+              "category3": ["Mood swings", "Sensitivity to criticism"],
+              "category4": ["Misplacing items", "Procrastination"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "4 - Good",
+              "category4": "1 - Terrible",
+              "category5": "Yes"
+            },
+            "events": "Events for day 1"
+          },
+          {
+            "id": "2",
+            "description": "Daily entry for day 2",
+            "symptomChecklist": {
+              "category1": ["Easily distracted", "Difficulty organizing tasks"],
+              "category2": ["Talking excessively", "Interrupting others"],
+              "category3": ["Mood swings", "Irritability or frustration"],
+              "category4": ["Forgetfulness", "Procrastination"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 2"
+          },
+          {
+            "id": "3",
+            "description": "Daily entry for day 3",
+            "symptomChecklist": {
+              "category1": [
+                "Difficulty sustaining attention",
+                "Easily distracted"
+              ],
+              "category2": ["Talking excessively", "Interrupting others"],
+              "category3": ["Sensitivity to criticism", "Mood swings"],
+              "category4": ["Forgetfulness", "Misplacing items"],
+              "category5": [
+                "Trouble falling asleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "3 - Average",
+              "category5": "Yes"
+            },
+            "events": "Events for day 3"
+          },
+          {
+            "id": "4",
+            "description": "Daily entry for day 4",
+            "symptomChecklist": {
+              "category1": [
+                "Difficulty sustaining attention",
+                "Frequently switching tasks"
+              ],
+              "category2": ["Fidgeting or tapping", "Inability to stay seated"],
+              "category3": ["Mood swings", "Irritability or frustration"],
+              "category4": ["Poor time management", "Procrastination"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "5 - Excellent",
+              "category3": "3 - Average",
+              "category4": "4 - Good",
+              "category5": "No"
+            },
+            "events": "Events for day 4"
+          },
+          {
+            "id": "5",
+            "description": "Daily entry for day 5",
+            "symptomChecklist": {
+              "category1": [
+                "Frequently switching tasks",
+                "Difficulty organizing tasks"
+              ],
+              "category2": ["Talking excessively", "Interrupting others"],
+              "category3": ["Mood swings", "Sensitivity to criticism"],
+              "category4": ["Forgetfulness", "Misplacing items"],
+              "category5": [
+                "Trouble falling asleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "5 - Excellent",
+              "category4": "1 - Terrible",
+              "category5": "Yes"
+            },
+            "events": "Events for day 5"
+          },
+          {
+            "id": "6",
+            "description": "Daily entry for day 6",
+            "symptomChecklist": {
+              "category1": ["Easily distracted", "Difficulty organizing tasks"],
+              "category2": ["Inability to stay seated", "Talking excessively"],
+              "category3": ["Mood swings", "Sensitivity to criticism"],
+              "category4": ["Misplacing items", "Procrastination"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "3 - Average",
+              "category3": "4 - Good",
+              "category4": "5 - Excellent",
+              "category5": "No"
+            },
+            "events": "Events for day 6"
+          },
+          {
+            "id": "7",
+            "description": "Daily entry for day 7",
+            "symptomChecklist": {
+              "category1": [
+                "Difficulty sustaining attention",
+                "Frequently switching tasks"
+              ],
+              "category2": ["Talking excessively", "Interrupting others"],
+              "category3": ["Mood swings", "Irritability or frustration"],
+              "category4": ["Forgetfulness", "Poor time management"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "2 - Poor",
+              "category4": "1 - Terrible",
+              "category5": "Yes"
+            },
+            "events": "Events for day 7"
+          },
+          {
+            "id": "8",
+            "description": "Daily entry for day 8",
+            "symptomChecklist": {
+              "category1": ["Easily distracted", "Difficulty organizing tasks"],
+              "category2": ["Inability to stay seated", "Talking excessively"],
+              "category3": ["Mood swings", "Sensitivity to criticism"],
+              "category4": ["Forgetfulness", "Misplacing items"],
+              "category5": [
+                "Trouble falling asleep",
+                "Fatigue despite adequate sleep"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "4 - Good",
+              "category2": "3 - Average",
+              "category3": "2 - Poor",
+              "category4": "5 - Excellent",
+              "category5": "No"
+            },
+            "events": "Events for day 8"
+          },
+          {
+            "id": "9",
+            "description": "Daily entry for day 9",
+            "symptomChecklist": {
+              "category1": [
+                "Frequently switching tasks",
+                "Difficulty organizing tasks"
+              ],
+              "category2": ["Talking excessively", "Interrupting others"],
+              "category3": ["Mood swings", "Irritability or frustration"],
+              "category4": ["Forgetfulness", "Misplacing items"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "4 - Good",
+              "category3": "5 - Excellent",
+              "category4": "1 - Terrible",
+              "category5": "Yes"
+            },
+            "events": "Events for day 9"
+          },
+          {
+            "id": "10",
+            "description": "Daily entry for day 10",
+            "symptomChecklist": {
+              "category1": [
+                "Difficulty sustaining attention",
+                "Frequently switching tasks"
+              ],
+              "category2": ["Inability to stay seated", "Interrupting others"],
+              "category3": ["Mood swings", "Sensitivity to criticism"],
+              "category4": ["Misplacing items", "Procrastination"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "3 - Average",
+              "category2": "5 - Excellent",
+              "category3": "4 - Good",
+              "category4": "1 - Terrible",
+              "category5": "Yes"
+            },
+            "events": "Events for day 10"
+          },
+          {
+            "id": "11",
+            "description": "Daily entry for day 11",
+            "symptomChecklist": {
+              "category1": ["Easily distracted", "Difficulty organizing tasks"],
+              "category2": ["Talking excessively", "Interrupting others"],
+              "category3": ["Mood swings", "Irritability or frustration"],
+              "category4": ["Forgetfulness", "Procrastination"],
+              "category5": [
+                "Fatigue despite adequate sleep",
+                "Headaches or muscle tension"
+              ]
+            },
+            "experienceChecklist": {
+              "category1": "2 - Poor",
+              "category2": "4 - Good",
+              "category3": "3 - Average",
+              "category4": "2 - Poor",
+              "category5": "No"
+            },
+            "events": "Events for day 11"
+          }
+        ]
       }
-    },
-    {
-      "month_id": 2,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "sometimes",
-        "Average Distraction Levels": "often",
-        "Task Switching Frequency": "rarely",
-        "Organization Difficulty": "sometimes"
-      },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "often",
-        "Seating Inability Frequency": "sometimes",
-        "Talking Excessively Frequency": "rarely",
-        "Interrupting Others Frequency": "often"
-      },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "sometimes",
-        "Irritability Levels": "rarely",
-        "Sensitivity to Criticism": "sometimes"
-      },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "rarely",
-        "Misplacing Items Frequency": "often",
-        "Time Management Difficulty": "rarely",
-        "Procrastination Levels": "sometimes"
-      },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "often",
-        "Fatigue Levels": "rarely",
-        "Physical Symptoms": "sometimes"
-      },
-      "User Experience Tracking": {
-        "Mood Trends": 4,
-        "Energy Trends": 4,
-        "Stress Trends": 3,
-        "Sleep Quality Trends": 3,
-        "Medication Adherence": 3,
-        "Notable Events Correlation": 3
-      }
-    },
-    {
-      "month_id": 3,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "rarely",
-        "Average Distraction Levels": "rarely",
-        "Task Switching Frequency": "sometimes",
-        "Organization Difficulty": "often"
-      },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "rarely",
-        "Seating Inability Frequency": "often",
-        "Talking Excessively Frequency": "sometimes",
-        "Interrupting Others Frequency": "rarely"
-      },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "often",
-        "Irritability Levels": "often",
-        "Sensitivity to Criticism": "rarely"
-      },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "sometimes",
-        "Misplacing Items Frequency": "sometimes",
-        "Time Management Difficulty": "often",
-        "Procrastination Levels": "rarely"
-      },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "sometimes",
-        "Fatigue Levels": "often",
-        "Physical Symptoms": "rarely"
-      },
-      "User Experience Tracking": {
-        "Mood Trends": 3,
-        "Energy Trends": 3,
-        "Stress Trends": 2,
-        "Sleep Quality Trends": 4,
-        "Medication Adherence": 5,
-        "Notable Events Correlation": 3
-      }
-    },
-    {
-      "month_id": 4,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "sometimes",
-        "Average Distraction Levels": "rarely",
-        "Task Switching Frequency": "often",
-        "Organization Difficulty": "sometimes"
-      },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "rarely",
-        "Seating Inability Frequency": "sometimes",
-        "Talking Excessively Frequency": "often",
-        "Interrupting Others Frequency": "sometimes"
-      },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "sometimes",
-        "Irritability Levels": "often",
-        "Sensitivity to Criticism": "sometimes"
-      },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "often",
-        "Misplacing Items Frequency": "sometimes",
-        "Time Management Difficulty": "rarely",
-        "Procrastination Levels": "often"
-      },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "sometimes",
-        "Fatigue Levels": "rarely",
-        "Physical Symptoms": "often"
-      },
-      "User Experience Tracking": {
-        "Mood Trends": 2,
-        "Energy Trends": 3,
-        "Stress Trends": 3,
-        "Sleep Quality Trends": 2,
-        "Medication Adherence": 4,
-        "Notable Events Correlation": 3
-      }
-    },
-    {
-      "month_id": 5,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "rarely",
-        "Average Distraction Levels": "often",
-        "Task Switching Frequency": "sometimes",
-        "Organization Difficulty": "rarely"
-      },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "often",
-        "Seating Inability Frequency": "rarely",
-        "Talking Excessively Frequency": "sometimes",
-        "Interrupting Others Frequency": "often"
-      },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "often",
-        "Irritability Levels": "rarely",
-        "Sensitivity to Criticism": "sometimes"
-      },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "rarely",
-        "Misplacing Items Frequency": "often",
-        "Time Management Difficulty": "sometimes",
-        "Procrastination Levels": "rarely"
-      },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "often",
-        "Fatigue Levels": "sometimes",
-        "Physical Symptoms": "rarely"
-      },
-      "User Experience Tracking": {
-        "Mood Trends": 3,
-        "Energy Trends": 3,
-        "Stress Trends": 4,
-        "Sleep Quality Trends": 4,
-        "Medication Adherence": 4,
-        "Notable Events Correlation": 2
-      }
-    },
-    {
-      "month_id": 6,
-      "Attention and Focus": {
-        "Average Difficulty Sustaining Attention": "sometimes",
-        "Average Distraction Levels": "rarely",
-        "Task Switching Frequency": "often",
-        "Organization Difficulty": "rarely"
-      },
-      "Hyperactivity and Impulsivity": {
-        "Fidgeting Frequency": "sometimes",
-        "Seating Inability Frequency": "rarely",
-        "Talking Excessively Frequency": "often",
-        "Interrupting Others Frequency": "rarely"
-      },
-      "Emotional Regulation": {
-        "Mood Swings Frequency": "rarely",
-        "Irritability Levels": "often",
-        "Sensitivity to Criticism": "sometimes"
-      },
-      "Daily Functioning": {
-        "Forgetfulness Incidents": "often",
-        "Misplacing Items Frequency": "sometimes",
-        "Time Management Difficulty": "rarely",
-        "Procrastination Levels": "often"
-      },
-      "Sleep and Physical Symptoms": {
-        "Sleep Troubles Frequency": "sometimes",
-        "Fatigue Levels": "rarely",
-        "Physical Symptoms": "often"
-      },
-      "User Experience Tracking": {
-        "Mood Trends": 3,
-        "Energy Trends": 3,
-        "Stress Trends": 4,
-        "Sleep Quality Trends": 3,
-        "Medication Adherence": 4,
-        "Notable Events Correlation": 2
-      }
-    }
-  ]
-}
+    ]
+  }
+]

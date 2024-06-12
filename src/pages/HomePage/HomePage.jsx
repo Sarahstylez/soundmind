@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { NextArrow } from "../../components/CTAs/CTAs";
 import { useEffect } from "react";
 import "./HomePage.scss";
-import BarChart from "../../components/BarChart/BarChart";
+// import BarChart from "../../components/BarChart/BarChart";
 
 function HomePage() {
   useEffect(() => {
@@ -30,9 +30,7 @@ function HomePage() {
             <NextArrow />
           </Link>
         </div>
-        <div className="home__overview-chart">
-          <BarChart />
-        </div>
+        <div className="home__overview-chart">{/* <BarChart /> */}</div>
       </section>
     </section>
   );

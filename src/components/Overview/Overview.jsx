@@ -29,7 +29,7 @@ function Overview() {
 
     fetch("/logs.json")
       .then((response) => response.json())
-      .then((data) => setLogsData(data))
+      .then((data) => setLogsData(data[0]))
       .catch((error) => console.error("Error fetching logs data:", error));
   }, []);
 
@@ -47,7 +47,7 @@ function Overview() {
         <h3>{currentYear}</h3>
       </div>
       <section className="overview__CTAs">
-        {logsData.symptoms
+        {logsData.months
           .sort((a, b) => b.month_id - a.month_id) // Sort in reverse order
           .map(({ month_id }) => (
             <SelectMonthButton

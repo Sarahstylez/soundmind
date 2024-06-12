@@ -178,6 +178,8 @@ function DailyLogForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // const timestamp = new Date().toISOString();
+    // const dataWithTimestamp = { ...formData, timestamp };
     // Log the form data to the console
     console.log("Form Data Submitted:", JSON.stringify(formData, null, 2));
 
