@@ -64,7 +64,9 @@ function LogInForm() {
 /*                               Daily Log Form                               */
 /* -------------------------------------------------------------------------- */
 
-const DailyLogForm = () => {
+function DailyLogForm(props) {
+  const { id } = props; // Extract id from props
+
   const [formData, setFormData] = useState({
     description: "",
     symptomChecklist: {
@@ -96,7 +98,7 @@ const DailyLogForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/form-data");
+        const response = await fetch("/symptoms.json");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -153,9 +155,26 @@ const DailyLogForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const response = await fetch(`/api/dailylog/${id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log("Success:", data);
+      // Optionally, handle success (e.g., show a success message or redirect)
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Optionally, handle error (e.g., show an error message)
+    }
   };
 
   if (loading) {
@@ -260,7 +279,7 @@ const DailyLogForm = () => {
           </label>
         </section>
         <section className="dl-form__CTAs">
-          <PrimaryButton label="Save" />
+          <PrimaryButton label="Save" onClick={handleSubmit} />
           <Link to="/home">
             <SecondaryButton label="Cancel" />
           </Link>
@@ -268,7 +287,7 @@ const DailyLogForm = () => {
       </form>
     </section>
   );
-};
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                Form Exports                                */

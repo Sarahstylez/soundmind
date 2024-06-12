@@ -4,15 +4,18 @@ import "./NavigationWrapper.scss";
 
 const NavigationWrapper = ({ children }) => {
   const location = useLocation();
-  const showNavigation = [
+  const pathnamesToShowNavigation = [
     "/home",
     "/settings",
-    "/dailylog/:id",
-    "/dailylog/undefined",
-    "/overview",
-    "/overview/:id",
-    "/overview/undefined",
-  ].some((path) => location.pathname.startsWith(path));
+    "/dailylog/",
+    "/overview/",
+  ];
+
+  const showNavigation = pathnamesToShowNavigation.some(
+    (path) =>
+      location.pathname.startsWith(path) ||
+      new RegExp(`^${path}[1-31]*$`).test(location.pathname)
+  );
 
   return (
     <div>
