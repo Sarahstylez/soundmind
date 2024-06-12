@@ -5,8 +5,8 @@
 .login {
   @include flex(center, start);
   flex-direction: column;
-  height: 952px;
-  padding-top: 4rem;
+  height: 932px;
+  padding-top: 2rem;
   &__CTAs {
     @include flex(center, space-between);
     flex-direction: column;

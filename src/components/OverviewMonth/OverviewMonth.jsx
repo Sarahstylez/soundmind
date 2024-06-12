@@ -72,12 +72,12 @@ function OverviewMonth() {
           <h3>Events</h3>
         </div>
         <EventsButton />
-      </section>
-      <section className="overview-month__CTAs">
-        <PrimaryButton label="Export as PDF" />
-        <Link to="/overview">
-          <SecondaryButton label="Overview" />
-        </Link>
+        <section className="overview-month__CTAs">
+          <PrimaryButton label="Export as PDF" />
+          <Link to="/overview">
+            <SecondaryButton label="Overview" />
+          </Link>
+        </section>{" "}
       </section>
     </>
   );
